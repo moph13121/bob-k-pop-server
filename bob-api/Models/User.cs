@@ -28,6 +28,8 @@ namespace bob_api.Models
 
         public ICollection<ProductsOrder> ProductsOrders { get; set; }
 
-        public ICollection<Wishlist> Wishlist { get; set; }
+        public ICollection<Wishlist> Wishlists { get; set; }
+
+        public ICollection<Order> Orders { get; set; }
     }
 }

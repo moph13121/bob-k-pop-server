@@ -51,6 +51,18 @@ namespace bob_api.Data
                 .HasForeignKey(r => r.ProductId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+            modelBuilder.Entity<Wishlist>()
+                .HasOne<User>(w => w.User)
+                .WithMany(u => u.Wishlists)
+                .HasForeignKey(w => w.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Order>()
+                .HasOne<User>(o => o.User) 
+                .WithMany(u => u.Orders)
+                .HasForeignKey(o => o.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
             //Join table for Product and Category
             modelBuilder.Entity<Product>()
                 .HasMany(p => p.Categories)
@@ -76,7 +88,7 @@ namespace bob_api.Data
                 .HasForeignKey(po => po.ProductId)
                 .OnDelete(DeleteBehavior.Cascade);
 
-            //Relation for Wishlist
+            
 
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
