@@ -30,6 +30,15 @@ namespace bob_api.Data
             modelBuilder.Entity<User>()
                 .HasKey(u => u.Id);
 
+            modelBuilder.Entity<Order>()
+                .HasKey(o => o.Id);
+
+            modelBuilder.Entity<ProductsOrder>()
+                .HasKey(po => new {po.UserId, po.ProductId});
+
+            modelBuilder.Entity<Wishlist>()
+                .HasKey(w => w.Id);
+
             //Add foreign-key relations
             modelBuilder.Entity<Rating>()
                 .HasOne<User>(r => r.User)
@@ -48,6 +57,27 @@ namespace bob_api.Data
                 .WithMany(c => c.Products)
                 .UsingEntity(pc => pc.ToTable("product_categories"));
 
+            //Join table for Product and Wishlist
+            modelBuilder.Entity<Wishlist>()
+                .HasMany<Product>(w => w.Products)
+                .WithMany(p => p.Wishlists)
+                .UsingEntity(wp => wp.ToTable("product_wishlist"));
+
+            //Relation for ProductsOrder
+            modelBuilder.Entity<ProductsOrder>()
+                .HasOne<User>(po => po.User)
+                .WithMany(u => u.ProductsOrders)
+                .HasForeignKey(po => po.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<ProductsOrder>()
+                .HasOne<Product>(po => po.Product)
+                .WithMany(p => p.ProductsOrders)
+                .HasForeignKey(po => po.ProductId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            //Relation for Wishlist
+
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -63,5 +93,9 @@ namespace bob_api.Data
         public DbSet<Rating> Ratings { get; set; }
 
         public DbSet<User> Users { get; set; }
+
+        public DbSet<Order> Orders { get; set; }
+
+        public DbSet<ProductsOrder> ProductOrders { get; set; }
     }
 }

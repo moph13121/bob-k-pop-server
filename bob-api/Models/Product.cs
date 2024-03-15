@@ -29,5 +29,9 @@ namespace bob_api.Models
         public ICollection<Category> Categories { get; set;}
 
         public ICollection<Rating> Ratings { get; set;}
+
+        public ICollection<ProductsOrder> ProductsOrders { get; set; }
+
+        public ICollection<Wishlist> Wishlists { get; set; }
     }
 }

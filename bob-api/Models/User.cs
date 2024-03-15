@@ -25,5 +25,9 @@ namespace bob_api.Models
 
         //Navigational property
         public ICollection<Rating> Ratings { get; set; }
+
+        public ICollection<ProductsOrder> ProductsOrders { get; set; }
+
+        public ICollection<Wishlist> Wishlist { get; set; }
     }
 }
