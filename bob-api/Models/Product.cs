@@ -24,5 +24,7 @@ namespace bob_api.Models
 
         [Column("updated_at")]
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        public ICollection<Category> Categories { get; set;}
     }
 }
