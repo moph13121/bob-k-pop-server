@@ -1,11 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace bob_api.Models
 {
-    public class User
+    public class User : IdentityUser
     {
         [Column("id")]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Column("first_name")]
         public string FirstName { get; set; }
@@ -25,8 +26,6 @@ namespace bob_api.Models
 
         //Navigational property
         public ICollection<Rating> Ratings { get; set; }
-
-        public ICollection<ProductsOrder> ProductsOrders { get; set; }
 
         public ICollection<Wishlist> Wishlists { get; set; }
 

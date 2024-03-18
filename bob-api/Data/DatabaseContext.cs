@@ -34,7 +34,7 @@ namespace bob_api.Data
                 .HasKey(o => o.Id);
 
             modelBuilder.Entity<ProductsOrder>()
-                .HasKey(po => new {po.UserId, po.ProductId});
+                .HasKey(po => new {po.OrderId, po.ProductId});
 
             modelBuilder.Entity<Wishlist>()
                 .HasKey(w => w.Id);
@@ -77,16 +77,14 @@ namespace bob_api.Data
 
             //Relation for ProductsOrder
             modelBuilder.Entity<ProductsOrder>()
-                .HasOne<User>(po => po.User)
-                .WithMany(u => u.ProductsOrders)
-                .HasForeignKey(po => po.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasOne<Order>(po => po.Order)
+                .WithMany(o => o.ProductOrders)
+                .HasForeignKey(po => po.OrderId);
 
             modelBuilder.Entity<ProductsOrder>()
-                .HasOne<Product>(po => po.Product)
+               .HasOne<Product>(po => po.Product)
                 .WithMany(p => p.ProductsOrders)
-                .HasForeignKey(po => po.ProductId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasForeignKey(po => po.ProductId);
 
             
 
