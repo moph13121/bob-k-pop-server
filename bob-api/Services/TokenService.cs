@@ -39,7 +39,7 @@ namespace bob_api.Services
 
         private List<Claim> CreateClaims(User user)
         {
-            var jwtSub = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("JwtTokenSettings")["JwtRegisteredClaimNamesSub"];
+            var jwtSub = new ConfigurationBuilder().AddJsonFile("appsettings.Development.json").Build().GetSection("JwtTokenSettings")["JwtRegisteredClaimNamesSub"];
 
             try
             {
@@ -48,7 +48,9 @@ namespace bob_api.Services
                 new Claim(JwtRegisteredClaimNames.Sub, jwtSub),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString()),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new Claim(ClaimTypes.Name, user.FirstName),
+                new Claim(ClaimTypes.Email, user.Email),
             };
 
                 return claims;
@@ -62,7 +64,7 @@ namespace bob_api.Services
 
         private SigningCredentials CreateSigningCredentials()
         {
-            var symmetricSecurityKey = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("JwtTokenSettings")["SymmetricSecurityKey"];
+            var symmetricSecurityKey = new ConfigurationBuilder().AddJsonFile("appsettings.Development.json").Build().GetSection("JwtTokenSettings")["SymmetricSecurityKey"];
 
             return new SigningCredentials(
                 new SymmetricSecurityKey(

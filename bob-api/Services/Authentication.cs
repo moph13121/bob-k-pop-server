@@ -5,7 +5,7 @@ namespace bob_api.Services
 {
     public class Authentication
     {
-        public string? Email { get; set; }
+        public string? email { get; set; }
         public string? Password { get; set; }
 
         public bool IsValid()
@@ -23,13 +23,13 @@ namespace bob_api.Services
     public class Registration
     {
         [Required]
-        public string? Email { get; set; }
+        public string Email { get; set; }
         [Required]
-        public string? Password { get; set; }
+        public string Password { get; set; }
         [Required]
-        public string? FirstName { get; set; }
+        public string FirstName { get; set; }
         [Required]
-        public string? LastName { get; set; }
+        public string LastName { get; set; }
 
     }
 }

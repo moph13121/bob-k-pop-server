@@ -3,6 +3,7 @@ using bob_api.Models;
 using bob_api.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace bob_api.Controllers
 {
@@ -33,8 +34,9 @@ namespace bob_api.Controllers
             }
 
             var result = await _userManager.CreateAsync(
-                new User { FirstName = request.FirstName, LastName= request.LastName, Email = request.Email },
+                new User { FirstName = request.FirstName, LastName = request.LastName, Email = request.Email, UserName = request.Email, Password = request.Password  },
                 request.Password!
+
             );
 
             if (result.Succeeded)
@@ -61,21 +63,21 @@ namespace bob_api.Controllers
                 return BadRequest(ModelState);
             }
 
-            var managedUser = await _userManager.FindByEmailAsync(request.Email!);
+            var managedUser = await _userManager.Users.FirstOrDefaultAsync(u => u.Email.ToLower() == request.email!.ToLower());
 
             if (managedUser == null)
             {
-                return BadRequest("Bad credentials");
+                return BadRequest("Bad email credentials");
             }
 
             var isPasswordValid = await _userManager.CheckPasswordAsync(managedUser, request.Password!);
 
             if (!isPasswordValid)
             {
-                return BadRequest("Bad credentials");
+                return BadRequest("Bad password credentials");
             }
 
-            var userInDb = _context.Users.FirstOrDefault(u => u.Email == request.Email);
+            var userInDb = _context.Users.FirstOrDefault(u => u.Email == request.email);
 
             if (userInDb is null)
             {

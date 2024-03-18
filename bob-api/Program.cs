@@ -60,7 +60,6 @@ builder.Services
     .AddIdentity<User, IdentityRole>(options =>
     {
         options.SignIn.RequireConfirmedAccount = false;
-        options.User.RequireUniqueEmail = true;
         options.Password.RequireDigit = false;
         options.Password.RequiredLength = 3;
         options.Password.RequireNonAlphanumeric = false;
