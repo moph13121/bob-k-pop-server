@@ -10,7 +10,7 @@ namespace bob_api.Data
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) 
         {
-            var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
+            var configuration = new ConfigurationBuilder().AddJsonFile("appsettings.Development.json").Build();
             _connectionString = configuration.GetValue<string>("ConnectionStrings:DefaultConnectionString")!;
             this.Database.EnsureCreated();
         }
@@ -109,5 +109,7 @@ namespace bob_api.Data
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<ProductsOrder> ProductOrders { get; set; }
+
+        public DbSet<Wishlist> Wishlist { get; set; }
     }
 }

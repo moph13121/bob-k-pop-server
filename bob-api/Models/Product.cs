@@ -19,6 +19,9 @@ namespace bob_api.Models
         [Column("stock")]
         public int Stock { get; set;}
 
+        [Column("image")] 
+        public string Image { get; set;}
+
         [Column("created_at")]
         public DateTime CreatedAt { get; set;} = DateTime.UtcNow;
 
