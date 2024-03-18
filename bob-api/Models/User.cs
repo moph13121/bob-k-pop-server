@@ -1,8 +1,9 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace bob_api.Models
 {
-    public class User
+    public class User : IdentityUser
     {
         [Column("id")]
         public int Id { get; set; }
