@@ -5,7 +5,7 @@ namespace bob_api.Models
     public class Order
     {
         [Column("id")]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         [Column("status")]
         public string status { get; set; }
         [Column("created_at")]
@@ -19,5 +19,7 @@ namespace bob_api.Models
         //Navigational property
 
         public User User { get; set; }
+
+        public ICollection<ProductsOrder> ProductOrders { get; set; }
     }
 }

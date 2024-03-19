@@ -5,7 +5,7 @@ namespace bob_api.Models
     public class Rating
     {
         [Column("id")]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Column("review")]
         public string Review { get; set; }

@@ -5,10 +5,10 @@ namespace bob_api.Models
     public class Wishlist
     {
         [Column("id")]
-        public int Id { get; set; }
+        public Guid Id { get; set; }
 
         [Column("user_id")]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         [Column("created_at")]
         public DateTime CreatedAt { get; set;} = DateTime.UtcNow;

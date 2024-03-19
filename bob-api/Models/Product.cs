@@ -5,7 +5,7 @@ namespace bob_api.Models
     public class Product
     {
         [Column("id")]
-        public int Id { get; set;}
+        public Guid Id { get; set;}
 
         [Column("title")]
         public string Title { get; set;}
