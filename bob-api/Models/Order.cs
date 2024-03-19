@@ -14,7 +14,7 @@ namespace bob_api.Models
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         [Column("user_id")]
-        public int UserId { get; set; }
+        public Guid UserId { get; set; }
 
         //Navigational property
 
