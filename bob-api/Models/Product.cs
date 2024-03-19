@@ -37,4 +37,30 @@ namespace bob_api.Models
 
         public ICollection<Wishlist> Wishlists { get; set; }
     }
+
+    // Product without references to navigational properties
+    public class ProductDto
+    {
+        public Guid Id { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public int Price { get; set; }
+        public int Stock { get; set; }
+        public string Image { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        // Construct ProductDto using a Product
+        public ProductDto(Product product) 
+        { 
+            Id = product.Id;
+            Title = product.Title;
+            Description = product.Description;
+            Price = product.Price;
+            Stock = product.Stock;
+            Image = product.Image;
+            CreatedAt = product.CreatedAt;
+            UpdatedAt = product.UpdatedAt;
+        }
+    }
 }

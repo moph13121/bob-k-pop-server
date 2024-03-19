@@ -8,6 +8,8 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
+using bob_api.Endpoints;
+using bob_api.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -51,7 +53,7 @@ builder.Services.AddDbContext<DatabaseContext>(
     opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnectionString"))
     );
 
-
+builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 builder.Services.AddScoped<TokenService, TokenService>();
 
 
@@ -111,6 +113,8 @@ app.UseHttpsRedirection();
 app.UseStatusCodePages();
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.StorefrontEndpoint();
 
 app.MapControllers();
 app.Run();
