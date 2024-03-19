@@ -7,7 +7,7 @@ namespace bob_api.Data
         private List<Product> _products = [];
         private List<Category> _categories = [];
         private List<Order> _orders = [];
-        private List<ProductsOrder> _productsOrder = [];
+        private List<ProductsOrder> _productsOrders = [];
         private List<Rating> _ratings = [];
         private List<User> _users = [];
         private List<Wishlist> _wishlists = [];
@@ -84,74 +84,78 @@ namespace bob_api.Data
                 Name = "Merch"
             };
 
-            Categories.Add(Girl);
-            Categories.Add(Boy);
-            Categories.Add(BTS);
-            Categories.Add(StrayKids);
-            Categories.Add(BigBang);
-            Categories.Add(Ateez);
-            Categories.Add(Blackpink);
-            Categories.Add(RedVelvet);
-            Categories.Add(LE_SSERAFIM);
-            Categories.Add(GIDLE);
-            Categories.Add(LightStickProducts);
-            Categories.Add(JewelryProducts);
-            Categories.Add(MerchProducts);
+            _categories.Add(Girl);
+            _categories.Add(Boy);
+            _categories.Add(BTS);
+            _categories.Add(StrayKids);
+            _categories.Add(BigBang);
+            _categories.Add(Ateez);
+            _categories.Add(Blackpink);
+            _categories.Add(RedVelvet);
+            _categories.Add(LE_SSERAFIM);
+            _categories.Add(GIDLE);
+            _categories.Add(LightStickProducts);
+            _categories.Add(JewelryProducts);
+            _categories.Add(MerchProducts);
 
             //Products
 
             Product product1 = new Product()
             {
                 Id = Guid.NewGuid(),
+                Title = "TestBoy",
                 Price = 10,
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 Image = "",
                 Stock = 10,
             };
-            product1.Categories.Add(LightStickProducts);
-            product1.Categories.Add(Boy);
-            product1.Categories.Add(BTS);
+            //product1.Categories.Add(LightStickProducts);
+            //product1.Categories.Add(Boy);
+            //product1.Categories.Add(BTS);
 
             Product product2 = new Product()
             {
                 Id = Guid.NewGuid(),
                 Price = 15,
+                Title = "Test2",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 Image = "",
                 Stock = 10,
             };
-            product1.Categories.Add(LightStickProducts);
-            product1.Categories.Add(Girl);
-            product1.Categories.Add(RedVelvet);
+            //product1.Categories.Add(LightStickProducts);
+            //product1.Categories.Add(Girl);
+            //product1.Categories.Add(RedVelvet);
 
             Product product3 = new Product()
             {
                 Id = Guid.NewGuid(),
                 Price = 11,
+                Title = "Test3",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 Image = "",
                 Stock = 10,
             };
-            product1.Categories.Add(LightStickProducts);
-            product1.Categories.Add(Boy);
-            product1.Categories.Add(BigBang);
+            //product1.Categories.Add(LightStickProducts);
+            //product1.Categories.Add(Boy);
+            //product1.Categories.Add(BigBang);
 
             Product product4 = new Product()
             {
                 Id = Guid.NewGuid(),
                 Price = 10,
+                Title = "Test4",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 Image = "",
                 Stock = 10,
             };
-            product1.Categories.Add(LightStickProducts);
-            product1.Categories.Add(Girl);
-            product1.Categories.Add(Blackpink);
+            //product1.Categories.Add(LightStickProducts);
+            //product1.Categories.Add(Girl);
+            //product1.Categories.Add(Blackpink);
 
-            Products.Add(product1);
-            Products.Add(product2);
-            Products.Add(product3);
-            Products.Add(product4);
+            _products.Add(product1);
+            _products.Add(product2);
+            _products.Add(product3);
+            _products.Add(product4);
 
             //User
             User user1 = new User()
@@ -162,7 +166,7 @@ namespace bob_api.Data
                 Email = "test@test.no",
                 Password = "password",
             };
-            Users.Add(user1);
+            _users.Add(user1);
 
             //Order
             Order order = new Order()
@@ -171,18 +175,18 @@ namespace bob_api.Data
                 UserId = user1.Id,
                 status = "Unfinished"
             };
-            Orders.Add(order);
+            _orders.Add(order);
 
         }
         
 
 
-        public List<Product> Products { get; set; }
-        public List<Category> Categories { get; set; }
-        public List<Order> Orders { get; set; }
-        public List<ProductsOrder> ProductsOrder { get; set; }
-        public List<Rating> Ratings { get; set; }
-        public List<User> Users { get; set; }
-        public List<Wishlist> Wishlists { get; set; }
+        public List<Product> Products { get { return _products; } }
+        public List<Category> Categories { get { return _categories; } }
+        public List<Order> Orders { get { return _orders; } }
+        public List<ProductsOrder> ProductsOrder { get { return _productsOrders; } }
+        public List<Rating> Ratings { get { return _ratings; } }
+        public List<User> Users { get { return _users; } }
+        public List<Wishlist> Wishlists { get { return _wishlists; } }
     }
 }

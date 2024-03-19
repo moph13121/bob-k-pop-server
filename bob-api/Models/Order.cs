@@ -18,8 +18,8 @@ namespace bob_api.Models
 
         //Navigational property
 
-        public User User { get; set; }
+        //public User User { get; set; }
 
-        public ICollection<ProductsOrder> ProductOrders { get; set; }
+        //public ICollection<ProductsOrder> ProductOrders { get; set; }
     }
 }

@@ -26,9 +26,37 @@ namespace bob_api.Models
         public Guid ProductId { get; set; }
         
         //Navigational properties
-        public User User { get; set; }
+        //public User User { get; set; }
 
-        public Product Product { get; set; }
+        //public Product Product { get; set; }
 
+    }
+
+    public class RatingDTO
+    {
+        public Guid Id { get; set; }
+
+        public string Review { get; set; }
+
+        public int RatingValue { get; set; }
+
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+
+        public Guid UserId { get; set; }
+
+        public Guid ProductId { get; set; }
+
+        public RatingDTO(Rating rating)
+        {
+            Id = rating.Id;
+            Review = rating.Review;
+            RatingValue = rating.RatingValue;
+            CreatedAt = rating.CreatedAt;
+            UpdatedAt = rating.UpdatedAt;
+            UserId = rating.UserId;
+            ProductId = rating.ProductId;
+        }
     }
 }

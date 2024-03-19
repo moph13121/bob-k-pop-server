@@ -25,10 +25,10 @@ namespace bob_api.Models
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         //Navigational property
-        public ICollection<Rating> Ratings { get; set; }
+        //public ICollection<Rating> Ratings { get; set; }
 
-        public ICollection<Wishlist> Wishlists { get; set; }
+        //public ICollection<Wishlist> Wishlists { get; set; }
 
-        public ICollection<Order> Orders { get; set; }
+        //public ICollection<Order> Orders { get; set; }
     }
 }

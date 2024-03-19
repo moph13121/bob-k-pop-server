@@ -1,4 +1,6 @@
-﻿namespace bob_api.Repository
+﻿using System.Linq.Expressions;
+
+namespace bob_api.Repository
 {
     public interface IRepository<T>
     {
@@ -7,5 +9,7 @@
         Task<T> Create(T entity);
         Task<T> Update(T entity);
         Task<T> Delete(T entity);
+
+        IQueryable<T> GetByCondition(Expression<Func<T, bool>> expression);
     }
 }

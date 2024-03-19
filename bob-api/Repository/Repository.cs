@@ -1,5 +1,6 @@
 ﻿using bob_api.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace bob_api.Repository
 {
@@ -43,6 +44,11 @@ namespace bob_api.Repository
             _db.Entry(entity).State = EntityState.Deleted;
             await _db.SaveChangesAsync();
             return entity;
+        }
+
+        public IQueryable<T> GetByCondition(Expression<Func<T, bool>> expression)
+        {
+            return _table.Where(expression);
         }
     }
 }

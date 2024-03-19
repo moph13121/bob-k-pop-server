@@ -12,8 +12,8 @@ namespace bob_api.Models
         public int Quantity { get; set; }
 
         //Navigational properties
-        public Order Order { get; set; }
-        
-        public Product Product { get; set; }
+        //public Order Order { get; set; }
+
+        //public Product Product { get; set; }
     }
 }

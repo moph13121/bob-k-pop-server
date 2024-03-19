@@ -12,8 +12,8 @@ using bob_api.Data;
 namespace bob_api.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240319083833_initialMigration")]
-    partial class initialMigration
+    [Migration("20240319144658_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,21 +40,6 @@ namespace bob_api.Migrations
                     b.ToTable("product_categories", (string)null);
                 });
 
-            modelBuilder.Entity("ProductWishlist", b =>
-                {
-                    b.Property<Guid>("ProductsId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("WishlistsId")
-                        .HasColumnType("uuid");
-
-                    b.HasKey("ProductsId", "WishlistsId");
-
-                    b.HasIndex("WishlistsId");
-
-                    b.ToTable("product_wishlist", (string)null);
-                });
-
             modelBuilder.Entity("bob_api.Models.Category", b =>
                 {
                     b.Property<Guid>("Id")
@@ -78,6 +63,99 @@ namespace bob_api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Category");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("a693783d-0000-4470-a551-a9ffa6be5e99"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2871),
+                            Name = "Girl",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2871)
+                        },
+                        new
+                        {
+                            Id = new Guid("d883bb8d-0565-4759-96e3-ecacaf6068dd"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2810),
+                            Name = "Boy",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2816)
+                        },
+                        new
+                        {
+                            Id = new Guid("44ffdd71-f5f0-4227-bbb4-4a797f297ed2"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2873),
+                            Name = "BTS",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2874)
+                        },
+                        new
+                        {
+                            Id = new Guid("352d4b7b-a322-4d12-970d-ecfd45061101"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2875),
+                            Name = "StrayKids",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2875)
+                        },
+                        new
+                        {
+                            Id = new Guid("15b0e60e-38b7-4ca8-9542-ed2b60480f32"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2891),
+                            Name = "BigBang",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2891)
+                        },
+                        new
+                        {
+                            Id = new Guid("2044935b-97cb-4bc0-85f2-670ce09ea92f"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2893),
+                            Name = "Ateez",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2894)
+                        },
+                        new
+                        {
+                            Id = new Guid("5665ddc6-e486-4cd8-8916-daaf06c613fd"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2895),
+                            Name = "Blackpink",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2895)
+                        },
+                        new
+                        {
+                            Id = new Guid("7988338b-d869-43ed-8edd-879a6d82a623"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2897),
+                            Name = "Red Velvet",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2897)
+                        },
+                        new
+                        {
+                            Id = new Guid("5b752fb8-0a89-4be8-a518-c9c40eef301f"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2899),
+                            Name = "LE SSERAFIM.",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2899)
+                        },
+                        new
+                        {
+                            Id = new Guid("c6a0b126-7e7b-4d44-8e5f-2db08faa0a94"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2900),
+                            Name = "(G)I-DLE.",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2901)
+                        },
+                        new
+                        {
+                            Id = new Guid("3b54993a-489c-4fa3-bbd4-d300ab799c66"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2902),
+                            Name = "LightStick",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2903)
+                        },
+                        new
+                        {
+                            Id = new Guid("daea78a2-03da-4022-9ed4-4113cb4d9474"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2904),
+                            Name = "Jewelry",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2905)
+                        },
+                        new
+                        {
+                            Id = new Guid("c8ebb5f8-dbda-433d-9b64-0f94fbcc2bbc"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2910),
+                            Name = "Merch",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2911)
+                        });
                 });
 
             modelBuilder.Entity("bob_api.Models.Order", b =>
@@ -106,9 +184,17 @@ namespace bob_api.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UserId");
-
                     b.ToTable("Orders");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("a16a772b-e563-4937-ad23-807e5638e0d7"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(3021),
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(3022),
+                            UserId = new Guid("c117ebdf-0dbc-4d5a-a207-924a8d945dca"),
+                            status = "Unfinished"
+                        });
                 });
 
             modelBuilder.Entity("bob_api.Models.Product", b =>
@@ -149,9 +235,60 @@ namespace bob_api.Migrations
                         .HasColumnType("timestamp with time zone")
                         .HasColumnName("updated_at");
 
+                    b.Property<Guid?>("WishlistId")
+                        .HasColumnType("uuid");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("WishlistId");
+
                     b.ToTable("Product");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("49c977db-60c4-4a30-bc1e-4e644fb5b951"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2933),
+                            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            Image = "",
+                            Price = 10,
+                            Stock = 10,
+                            Title = "TestBoy",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2933)
+                        },
+                        new
+                        {
+                            Id = new Guid("f776b7de-5bf6-4219-b695-3bda7220a334"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2939),
+                            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            Image = "",
+                            Price = 15,
+                            Stock = 10,
+                            Title = "Test2",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2939)
+                        },
+                        new
+                        {
+                            Id = new Guid("3cd66a3d-fe79-4827-b179-69f9693bf829"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2942),
+                            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            Image = "",
+                            Price = 11,
+                            Stock = 10,
+                            Title = "Test3",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2943)
+                        },
+                        new
+                        {
+                            Id = new Guid("e8153be0-8ca5-43b6-9e0a-3e8f72b12922"),
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2945),
+                            Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            Image = "",
+                            Price = 10,
+                            Stock = 10,
+                            Title = "Test4",
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2945)
+                        });
                 });
 
             modelBuilder.Entity("bob_api.Models.ProductsOrder", b =>
@@ -169,8 +306,6 @@ namespace bob_api.Migrations
                         .HasColumnName("quantity");
 
                     b.HasKey("OrderId", "ProductId");
-
-                    b.HasIndex("ProductId");
 
                     b.ToTable("ProductOrders");
                 });
@@ -208,10 +343,6 @@ namespace bob_api.Migrations
                         .HasColumnName("user_id");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Ratings");
                 });
@@ -293,6 +424,25 @@ namespace bob_api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Users");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("c117ebdf-0dbc-4d5a-a207-924a8d945dca"),
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "315c0a71-b5de-4319-ab9e-bfc66ad5254b",
+                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2950),
+                            Email = "test@test.no",
+                            EmailConfirmed = false,
+                            FirstName = "Test",
+                            LastName = "Test",
+                            LockoutEnabled = false,
+                            Password = "password",
+                            PhoneNumberConfirmed = false,
+                            SecurityStamp = "7175224e-56c7-4597-b8ee-dd613da2711c",
+                            TwoFactorEnabled = false,
+                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2951)
+                        });
                 });
 
             modelBuilder.Entity("bob_api.Models.Wishlist", b =>
@@ -336,100 +486,27 @@ namespace bob_api.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("ProductWishlist", b =>
+            modelBuilder.Entity("bob_api.Models.Product", b =>
                 {
-                    b.HasOne("bob_api.Models.Product", null)
-                        .WithMany()
-                        .HasForeignKey("ProductsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("bob_api.Models.Wishlist", null)
+                        .WithMany("Products")
+                        .HasForeignKey("WishlistId");
+                });
+
+            modelBuilder.Entity("bob_api.Models.Wishlist", b =>
+                {
+                    b.HasOne("bob_api.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("WishlistsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("bob_api.Models.Order", b =>
-                {
-                    b.HasOne("bob_api.Models.User", "User")
-                        .WithMany("Orders")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("bob_api.Models.ProductsOrder", b =>
-                {
-                    b.HasOne("bob_api.Models.Order", "Order")
-                        .WithMany("ProductOrders")
-                        .HasForeignKey("OrderId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("bob_api.Models.Product", "Product")
-                        .WithMany("ProductsOrders")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Order");
-
-                    b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("bob_api.Models.Rating", b =>
-                {
-                    b.HasOne("bob_api.Models.Product", "Product")
-                        .WithMany("Ratings")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("bob_api.Models.User", "User")
-                        .WithMany("Ratings")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
 
                     b.Navigation("User");
                 });
 
             modelBuilder.Entity("bob_api.Models.Wishlist", b =>
                 {
-                    b.HasOne("bob_api.Models.User", "User")
-                        .WithMany("Wishlists")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("bob_api.Models.Order", b =>
-                {
-                    b.Navigation("ProductOrders");
-                });
-
-            modelBuilder.Entity("bob_api.Models.Product", b =>
-                {
-                    b.Navigation("ProductsOrders");
-
-                    b.Navigation("Ratings");
-                });
-
-            modelBuilder.Entity("bob_api.Models.User", b =>
-                {
-                    b.Navigation("Orders");
-
-                    b.Navigation("Ratings");
-
-                    b.Navigation("Wishlists");
+                    b.Navigation("Products");
                 });
 #pragma warning restore 612, 618
         }

@@ -12,6 +12,8 @@ namespace bob_api.Endpoints
         {
             var storefront = app.MapGroup("storefront");
             storefront.MapGet("/", GetProducts);
+            storefront.MapGet("/category", GetCategories);
+            storefront.MapGet("/ratings", GetRatings);
 
         }
 
@@ -28,5 +30,27 @@ namespace bob_api.Endpoints
 
             return TypedResults.Ok(output);
         }
+
+        public static async Task<IResult> GetCategories(IRepository<Category> repository)
+        {
+            Payload<List<CategoryDTO>> output = new();
+            output.data = new();
+            foreach (Category category in await repository.Get())
+            {
+                output.data.Add(new CategoryDTO(category));
+            }
+            return TypedResults.Ok(output);
+        }
+        public static async Task<IResult> GetRatings(IRepository<Rating> repository)
+        {
+            Payload<List<RatingDTO>> output = new();
+            output.data = new();
+            foreach (Rating rating in await repository.Get())
+            {
+                output.data.Add(new RatingDTO(rating));
+            }
+            return TypedResults.Ok(output);
+        }
+
     }
 }
