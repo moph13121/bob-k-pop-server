@@ -379,3 +379,7 @@ FodyWeavers.xsd
 */**/bin/Release   
 */**/obj/Debug   
 */**/obj/Release
+bob-api/obj/bob-api.csproj.nuget.dgspec.json
+bob-api/obj/bob-api.csproj.nuget.g.props
+bob-api/obj/project.assets.json
+bob-api/obj/project.nuget.cache
