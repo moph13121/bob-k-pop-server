@@ -8,6 +8,7 @@ namespace bob_api.Data
         private List<Category> _categories = [];
         private List<Order> _orders = [];
         private List<ProductsOrder> _productsOrders = [];
+        private List<ProductCategory> _productCategory = [];
         private List<Rating> _ratings = [];
         private List<User> _users = [];
         private List<Wishlist> _wishlists = [];
@@ -16,7 +17,6 @@ namespace bob_api.Data
         {
 
             //Category
-
             Category Boy = new Category()
             {
                 Id = Guid.NewGuid(),
@@ -72,7 +72,7 @@ namespace bob_api.Data
             {
                 Id = Guid.NewGuid(),
                 Name = "LightStick"
-            };            
+            };
             Category JewelryProducts = new Category()
             {
                 Id = Guid.NewGuid(),
@@ -81,7 +81,7 @@ namespace bob_api.Data
             Category MerchProducts = new Category()
             {
                 Id = Guid.NewGuid(),
-                Name = "Merch"
+                Name = "Merch",
             };
 
             _categories.Add(Girl);
@@ -108,6 +108,7 @@ namespace bob_api.Data
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 Image = "",
                 Stock = 10,
+
             };
             //product1.Categories.Add(LightStickProducts);
             //product1.Categories.Add(Boy);
@@ -157,6 +158,32 @@ namespace bob_api.Data
             _products.Add(product3);
             _products.Add(product4);
 
+
+            ProductCategory productCategory1 = new ProductCategory()
+            {
+                ProductId = product1.Id,
+                CategoryId = Girl.Id,
+            };
+            ProductCategory productCategory2 = new ProductCategory()
+            {
+                ProductId = product2.Id,
+                CategoryId = Girl.Id,
+            };
+            ProductCategory productCategory3 = new ProductCategory()
+            {
+                ProductId = product3.Id,
+                CategoryId = Girl.Id,
+            };            
+            ProductCategory productCategory4 = new ProductCategory()
+            {
+                ProductId = product1.Id,
+                CategoryId = BTS.Id,
+            };
+
+            _productCategory.Add(productCategory1);
+            _productCategory.Add(productCategory2);
+            _productCategory.Add(productCategory3);
+            _productCategory.Add(productCategory4);
             //User
             User user1 = new User()
             {
@@ -229,6 +256,7 @@ namespace bob_api.Data
         public List<Category> Categories { get { return _categories; } }
         public List<Order> Orders { get { return _orders; } }
         public List<ProductsOrder> ProductsOrder { get { return _productsOrders; } }
+        public List<ProductCategory> ProductCategory { get { return _productCategory; } }
         public List<Rating> Ratings { get { return _ratings; } }
         public List<User> Users { get { return _users; } }
         public List<Wishlist> Wishlists { get { return _wishlists; } }
