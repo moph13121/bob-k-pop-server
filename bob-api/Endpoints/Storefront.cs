@@ -13,7 +13,6 @@ namespace bob_api.Endpoints
             var storefront = app.MapGroup("storefront");
             storefront.MapGet("/", GetProducts);
             storefront.MapGet("/category", GetCategories);
-            storefront.MapGet("/category/{categoryId}", GetProductsByCategoryID);
             storefront.MapGet("/ratings", GetRatings);
             storefront.MapGet("/ratings/{productId}", GetProductRatings);
             storefront.MapGet("/users", GetUsers);
@@ -34,8 +33,6 @@ namespace bob_api.Endpoints
 
             return TypedResults.Ok(output);
         }
-        
-        [ProducesResponseType(StatusCodes.Status200OK)]
 
         public static async Task<IResult> GetCategories(IRepository<Category> repository)
         {
@@ -47,9 +44,6 @@ namespace bob_api.Endpoints
             }
             return TypedResults.Ok(output);
         }
-
-        [ProducesResponseType(StatusCodes.Status200OK)]
-
         public static async Task<IResult> GetRatings(IRepository<Rating> repository)
         {
             Payload<List<RatingDTO>> output = new();
@@ -60,22 +54,6 @@ namespace bob_api.Endpoints
             }
             return TypedResults.Ok(output);
         }
-
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        public static async Task<IResult> GetProductsByCategoryID(IRepository<Category> repository, Guid categoryId)
-        {
-            Payload<CategoryWithProductOrderDTO> output = new Payload<CategoryWithProductOrderDTO>();
-            
-            Category request = await repository.GetById(categoryId);
-            CategoryWithProductOrderDTO result = new CategoryWithProductOrderDTO(request);
-
-            output.data = result;
-
-            return TypedResults.Ok(output);
-
-        }
-
-        [ProducesResponseType(StatusCodes.Status200OK)]
 
         public static async Task<IResult> GetProductRatings(IRepository<Rating> repository, Guid productID)
         {

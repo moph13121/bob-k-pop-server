@@ -13,7 +13,7 @@ namespace bob_api.Models
         [Column("updated_at")]
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-        public ICollection<ProductCategory> ProductCategories { get; set; }
+        public ICollection<Product> Products { get; set; }
 
     }
 
@@ -32,21 +32,4 @@ namespace bob_api.Models
             UpdatedAt = category.UpdatedAt;
         }
     }
-
-    public class CategoryWithProductOrderDTO : CategoryDTO
-    {
-
-        public List<ProductsCategoryDTOWithProduct> ProductCategories { get; set; } = new();
-
-        public CategoryWithProductOrderDTO(Category category) : base(category) 
-        {
-            foreach (ProductCategory product in category.ProductCategories)
-            {
-                ProductsCategoryDTOWithProduct productDTO = new ProductsCategoryDTOWithProduct(product);
-                ProductCategories.Add(productDTO);
-            }
-        }
-
-    }
-
 }
