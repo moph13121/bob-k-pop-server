@@ -33,13 +33,13 @@ namespace bob_api.Models
 
         //public ICollection<Rating> Ratings { get; set; }
 
-        //public ICollection<ProductsOrder> ProductsOrders { get; set; }
+        public ICollection<ProductsOrder> ProductsOrders { get; set; }
 
         //public ICollection<Wishlist> Wishlists { get; set; }
     }
 
     // Product without references to navigational properties
-    public class ProductDto
+    public class ProductDTO
     {
         public Guid Id { get; set; }
         public string Title { get; set; }
@@ -51,7 +51,7 @@ namespace bob_api.Models
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
         // Construct ProductDto using a Product
-        public ProductDto(Product product) 
+        public ProductDTO(Product product) 
         { 
             Id = product.Id;
             Title = product.Title;

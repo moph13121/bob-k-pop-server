@@ -14,18 +14,20 @@ namespace bob_api.Endpoints
             storefront.MapGet("/", GetProducts);
             storefront.MapGet("/category", GetCategories);
             storefront.MapGet("/ratings", GetRatings);
+            storefront.MapGet("/ratings/{productId}", GetProductRatings);
+            storefront.MapGet("/users", GetUsers);
 
         }
 
         [ProducesResponseType(StatusCodes.Status200OK)]
         public static async Task<IResult> GetProducts(IRepository<Product> repository)
         {
-            Payload<List<ProductDto>> output = new();
+            Payload<List<ProductDTO>> output = new();
             output.data = new();
 
             foreach (Product product in await repository.Get()) 
             {
-                output.data.Add(new ProductDto(product));
+                output.data.Add(new ProductDTO(product));
             }
 
             return TypedResults.Ok(output);
@@ -49,6 +51,31 @@ namespace bob_api.Endpoints
             {
                 output.data.Add(new RatingDTO(rating));
             }
+            return TypedResults.Ok(output);
+        }
+
+        public static async Task<IResult> GetProductRatings(IRepository<Rating> repository, Guid productID)
+        {
+            Payload<List<RatingDTO>> output = new();
+            output.data = new();
+            IQueryable<Rating> ratings = repository.GetByCondition(u => u.ProductId == productID);
+
+            foreach (var rating in ratings.ToArray())
+            {
+                System.Diagnostics.Debug.WriteLine("This is the rating" + rating);
+                output.data.Add(new RatingDTO(rating));
+            }
+            return TypedResults.Ok(output);
+
+        }
+
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public static async Task<IResult> GetUsers(IRepository<User> repository)
+        {
+            Payload<List<User>> output = new();
+            output.data = [.. await repository.Get()];
+
             return TypedResults.Ok(output);
         }
 

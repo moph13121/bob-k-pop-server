@@ -173,9 +173,53 @@ namespace bob_api.Data
             {
                 Id = Guid.NewGuid(),
                 UserId = user1.Id,
-                status = "Unfinished"
+                status = "Pending"
             };
             _orders.Add(order);
+
+            //Ratings
+
+            Rating rating1 = new Rating()
+            {
+                Id = Guid.NewGuid(),
+                Review = "This product was straight garbage cuh",
+                RatingValue = 2,
+                UserId = user1.Id,
+                ProductId = product1.Id,
+
+            };
+
+            Rating rating2 = new Rating()
+            {
+                Id = Guid.NewGuid(),
+                Review = "This product was straight fire blud",
+                RatingValue = 5,
+                UserId = user1.Id,
+                ProductId = product2.Id,
+
+            };
+            _ratings.Add(rating1);
+            _ratings.Add(rating2);
+
+            //ProductsOrder
+
+            ProductsOrder productsOrder = new ProductsOrder()
+            {
+                ProductId = product1.Id,
+                OrderId = order.Id,
+                Quantity = 1,
+            };
+
+            ProductsOrder productsOrder2 = new ProductsOrder()
+            {
+                ProductId = product2.Id,
+                OrderId = order.Id,
+                Quantity = 3,
+            };
+
+            _productsOrders.Add(productsOrder);
+            _productsOrders.Add(productsOrder2);
+
 
         }
         

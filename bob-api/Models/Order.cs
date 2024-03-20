@@ -20,6 +20,47 @@ namespace bob_api.Models
 
         //public User User { get; set; }
 
-        //public ICollection<ProductsOrder> ProductOrders { get; set; }
+        public ICollection<ProductsOrder> ProductOrders { get; set; }
+    }
+
+    public class OrderDTO
+    {
+        public Guid Id { get; set; }
+        public string status { get; set; }
+        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public Guid UserId { get; set; }
+
+
+
+        public OrderDTO(Order order)
+        {
+            Id = order.Id;
+            status = order.status;
+            CreatedAt = order.CreatedAt;
+            UpdatedAt = order.UpdatedAt;
+            UserId = order.UserId;
+
+        }
+
+    }
+
+    public class OrderWithProductOrderDTO : OrderDTO
+    {
+
+        public List<ProductsOrderDTOWithProduct> ProductOrders { get; set; } = new();
+
+
+
+        public OrderWithProductOrderDTO(Order order) : base(order)
+        {
+
+            foreach (ProductsOrder productsOrder in order.ProductOrders)
+            {
+                ProductsOrderDTOWithProduct poWithProdDTO = new ProductsOrderDTOWithProduct(productsOrder);
+                ProductOrders.Add(poWithProdDTO);
+            }
+
+        }
     }
 }

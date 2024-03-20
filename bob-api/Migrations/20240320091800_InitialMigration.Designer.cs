@@ -12,7 +12,7 @@ using bob_api.Data;
 namespace bob_api.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240319144658_InitialMigration")]
+    [Migration("20240320091800_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -67,94 +67,94 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a693783d-0000-4470-a551-a9ffa6be5e99"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2871),
+                            Id = new Guid("79400b3c-26e9-4150-898a-2d6f881421b9"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8126),
                             Name = "Girl",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2871)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8127)
                         },
                         new
                         {
-                            Id = new Guid("d883bb8d-0565-4759-96e3-ecacaf6068dd"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2810),
+                            Id = new Guid("c75bd07e-0c1f-4291-b622-017823f1868c"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8093),
                             Name = "Boy",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2816)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8095)
                         },
                         new
                         {
-                            Id = new Guid("44ffdd71-f5f0-4227-bbb4-4a797f297ed2"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2873),
+                            Id = new Guid("b1a5f6f5-d279-4c56-b03c-af1706dba170"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8128),
                             Name = "BTS",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2874)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8128)
                         },
                         new
                         {
-                            Id = new Guid("352d4b7b-a322-4d12-970d-ecfd45061101"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2875),
+                            Id = new Guid("084629ac-cf01-4f98-b6ed-d4c5cb56c00f"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8129),
                             Name = "StrayKids",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2875)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8129)
                         },
                         new
                         {
-                            Id = new Guid("15b0e60e-38b7-4ca8-9542-ed2b60480f32"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2891),
+                            Id = new Guid("c998a3af-bc7a-4f3b-a3e2-56960edf62e8"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8130),
                             Name = "BigBang",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2891)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8131)
                         },
                         new
                         {
-                            Id = new Guid("2044935b-97cb-4bc0-85f2-670ce09ea92f"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2893),
+                            Id = new Guid("f2105153-8a61-48c0-aceb-a3ccf9a5ca4f"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8132),
                             Name = "Ateez",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2894)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8132)
                         },
                         new
                         {
-                            Id = new Guid("5665ddc6-e486-4cd8-8916-daaf06c613fd"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2895),
+                            Id = new Guid("4bea4590-2f31-4457-857e-0191907f7c7b"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8133),
                             Name = "Blackpink",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2895)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8133)
                         },
                         new
                         {
-                            Id = new Guid("7988338b-d869-43ed-8edd-879a6d82a623"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2897),
+                            Id = new Guid("535823a1-a387-4bac-ae86-d19bb6cc86c2"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8134),
                             Name = "Red Velvet",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2897)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8134)
                         },
                         new
                         {
-                            Id = new Guid("5b752fb8-0a89-4be8-a518-c9c40eef301f"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2899),
+                            Id = new Guid("62dc179f-73c1-4b51-a71a-38f51063d3e9"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8135),
                             Name = "LE SSERAFIM.",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2899)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8135)
                         },
                         new
                         {
-                            Id = new Guid("c6a0b126-7e7b-4d44-8e5f-2db08faa0a94"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2900),
+                            Id = new Guid("dc477ed9-43c9-4ede-82b4-b23892ada3d6"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8137),
                             Name = "(G)I-DLE.",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2901)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8138)
                         },
                         new
                         {
-                            Id = new Guid("3b54993a-489c-4fa3-bbd4-d300ab799c66"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2902),
+                            Id = new Guid("4700fdb8-e263-4453-9adc-d4683e05c1c3"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8138),
                             Name = "LightStick",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2903)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8139)
                         },
                         new
                         {
-                            Id = new Guid("daea78a2-03da-4022-9ed4-4113cb4d9474"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2904),
+                            Id = new Guid("9aa924f8-6583-4197-a68a-4f5f166b67db"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8140),
                             Name = "Jewelry",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2905)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8140)
                         },
                         new
                         {
-                            Id = new Guid("c8ebb5f8-dbda-433d-9b64-0f94fbcc2bbc"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2910),
+                            Id = new Guid("3dc941fe-38bb-4366-a44e-aeca8027ef5c"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8141),
                             Name = "Merch",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2911)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8141)
                         });
                 });
 
@@ -189,11 +189,11 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a16a772b-e563-4937-ad23-807e5638e0d7"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(3021),
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(3022),
-                            UserId = new Guid("c117ebdf-0dbc-4d5a-a207-924a8d945dca"),
-                            status = "Unfinished"
+                            Id = new Guid("c4ddb064-2b37-4600-b680-12deb24a94db"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8191),
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8191),
+                            UserId = new Guid("bdbc33e0-2930-41fa-9f39-1552386d177f"),
+                            status = "Pending"
                         });
                 });
 
@@ -247,47 +247,47 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("49c977db-60c4-4a30-bc1e-4e644fb5b951"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2933),
+                            Id = new Guid("d32872fd-24b5-411b-bffb-1f22e71db681"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8148),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             Image = "",
                             Price = 10,
                             Stock = 10,
                             Title = "TestBoy",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2933)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8148)
                         },
                         new
                         {
-                            Id = new Guid("f776b7de-5bf6-4219-b695-3bda7220a334"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2939),
+                            Id = new Guid("4bbd137c-cd9c-41e7-bd66-9c885feaa1ab"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8150),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             Image = "",
                             Price = 15,
                             Stock = 10,
                             Title = "Test2",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2939)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8151)
                         },
                         new
                         {
-                            Id = new Guid("3cd66a3d-fe79-4827-b179-69f9693bf829"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2942),
+                            Id = new Guid("e8f23f42-5279-4384-84ba-721279656442"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8152),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             Image = "",
                             Price = 11,
                             Stock = 10,
                             Title = "Test3",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2943)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8152)
                         },
                         new
                         {
-                            Id = new Guid("e8153be0-8ca5-43b6-9e0a-3e8f72b12922"),
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2945),
+                            Id = new Guid("ba58055b-4139-4b3c-9036-5fcbe77156d8"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8154),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             Image = "",
                             Price = 10,
                             Stock = 10,
                             Title = "Test4",
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2945)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8154)
                         });
                 });
 
@@ -307,7 +307,23 @@ namespace bob_api.Migrations
 
                     b.HasKey("OrderId", "ProductId");
 
+                    b.HasIndex("ProductId");
+
                     b.ToTable("ProductOrders");
+
+                    b.HasData(
+                        new
+                        {
+                            OrderId = new Guid("c4ddb064-2b37-4600-b680-12deb24a94db"),
+                            ProductId = new Guid("d32872fd-24b5-411b-bffb-1f22e71db681"),
+                            Quantity = 1
+                        },
+                        new
+                        {
+                            OrderId = new Guid("c4ddb064-2b37-4600-b680-12deb24a94db"),
+                            ProductId = new Guid("4bbd137c-cd9c-41e7-bd66-9c885feaa1ab"),
+                            Quantity = 3
+                        });
                 });
 
             modelBuilder.Entity("bob_api.Models.Rating", b =>
@@ -345,6 +361,28 @@ namespace bob_api.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Ratings");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("0c586465-aa64-456c-a39f-f428526bfc8f"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8196),
+                            ProductId = new Guid("d32872fd-24b5-411b-bffb-1f22e71db681"),
+                            RatingValue = 2,
+                            Review = "This product was straight garbage cuh",
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8196),
+                            UserId = new Guid("bdbc33e0-2930-41fa-9f39-1552386d177f")
+                        },
+                        new
+                        {
+                            Id = new Guid("3bbc9779-5cb4-4163-b363-cb0edd6dc26a"),
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8199),
+                            ProductId = new Guid("4bbd137c-cd9c-41e7-bd66-9c885feaa1ab"),
+                            RatingValue = 5,
+                            Review = "This product was straight fire blud",
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8200),
+                            UserId = new Guid("bdbc33e0-2930-41fa-9f39-1552386d177f")
+                        });
                 });
 
             modelBuilder.Entity("bob_api.Models.User", b =>
@@ -428,10 +466,10 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c117ebdf-0dbc-4d5a-a207-924a8d945dca"),
+                            Id = new Guid("bdbc33e0-2930-41fa-9f39-1552386d177f"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "315c0a71-b5de-4319-ab9e-bfc66ad5254b",
-                            CreatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2950),
+                            ConcurrencyStamp = "04a9a43c-0e64-4745-8948-b063498423fe",
+                            CreatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8158),
                             Email = "test@test.no",
                             EmailConfirmed = false,
                             FirstName = "Test",
@@ -439,9 +477,9 @@ namespace bob_api.Migrations
                             LockoutEnabled = false,
                             Password = "password",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "7175224e-56c7-4597-b8ee-dd613da2711c",
+                            SecurityStamp = "415177c6-0b68-49cb-82c2-04d03dd1f6e5",
                             TwoFactorEnabled = false,
-                            UpdatedAt = new DateTime(2024, 3, 19, 14, 46, 52, 855, DateTimeKind.Utc).AddTicks(2951)
+                            UpdatedAt = new DateTime(2024, 3, 20, 9, 17, 54, 923, DateTimeKind.Utc).AddTicks(8158)
                         });
                 });
 
@@ -493,6 +531,25 @@ namespace bob_api.Migrations
                         .HasForeignKey("WishlistId");
                 });
 
+            modelBuilder.Entity("bob_api.Models.ProductsOrder", b =>
+                {
+                    b.HasOne("bob_api.Models.Order", "Order")
+                        .WithMany("ProductOrders")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("bob_api.Models.Product", "Product")
+                        .WithMany("ProductsOrders")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Order");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("bob_api.Models.Wishlist", b =>
                 {
                     b.HasOne("bob_api.Models.User", "User")
@@ -502,6 +559,16 @@ namespace bob_api.Migrations
                         .IsRequired();
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("bob_api.Models.Order", b =>
+                {
+                    b.Navigation("ProductOrders");
+                });
+
+            modelBuilder.Entity("bob_api.Models.Product", b =>
+                {
+                    b.Navigation("ProductsOrders");
                 });
 
             modelBuilder.Entity("bob_api.Models.Wishlist", b =>

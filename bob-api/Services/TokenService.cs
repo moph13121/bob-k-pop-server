@@ -30,8 +30,8 @@ namespace bob_api.Services
 
         public JwtSecurityToken CreateJwtToken(List<Claim> claims, SigningCredentials credentials, DateTime expiration) =>
             new(
-            new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("JwtTokenSettings")["ValidIssuer"],
-            new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetSection("JwtTokenSettings")["ValidAudience"],
+            new ConfigurationBuilder().AddJsonFile("appsettings.Development.json").Build().GetSection("JwtTokenSettings")["ValidIssuer"],
+            new ConfigurationBuilder().AddJsonFile("appsettings.Development.json").Build().GetSection("JwtTokenSettings")["ValidAudience"],
             claims,
             expires: expiration,
             signingCredentials: credentials

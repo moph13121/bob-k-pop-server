@@ -30,5 +30,6 @@ namespace bob_api.Models
         //public ICollection<Wishlist> Wishlists { get; set; }
 
         //public ICollection<Order> Orders { get; set; }
+
     }
 }

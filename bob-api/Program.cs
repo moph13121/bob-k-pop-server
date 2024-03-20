@@ -53,6 +53,9 @@ builder.Services.AddDbContext<DatabaseContext>();
 builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
 builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
 builder.Services.AddScoped<IRepository<Rating>, Repository<Rating>>();
+builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+//Cart
+builder.Services.AddScoped<IRepository<Order>, Repository<Order>>();
 builder.Services.AddScoped<TokenService, TokenService>();
 
 
@@ -114,6 +117,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.StorefrontEndpoint();
+app.CartEndpoint();
 
 app.MapControllers();
 app.Run();

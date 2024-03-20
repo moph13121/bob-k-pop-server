@@ -30,6 +30,8 @@ namespace bob_api.Data
             modelBuilder.Entity<Category>().HasData(seeder.Categories);
             modelBuilder.Entity<User>().HasData(seeder.Users);
             modelBuilder.Entity<Order>().HasData(seeder.Orders);
+            modelBuilder.Entity<Rating>().HasData(seeder.Ratings);
+            modelBuilder.Entity<ProductsOrder>().HasData(seeder.ProductsOrder);
 
             //Set up keys for models
             modelBuilder.Entity<Category>()
@@ -90,15 +92,15 @@ namespace bob_api.Data
             //    .UsingEntity(wp => wp.ToTable("product_wishlist"));
 
             //Relation for ProductsOrder
-            //modelBuilder.Entity<ProductsOrder>()
-            //    .HasOne<Order>(po => po.Order)
-            //    .WithMany(o => o.ProductOrders)
-            //    .HasForeignKey(po => po.OrderId);
+            modelBuilder.Entity<ProductsOrder>()
+                .HasOne<Order>(po => po.Order)
+                .WithMany(o => o.ProductOrders)
+                .HasForeignKey(po => po.OrderId);
 
-            //modelBuilder.Entity<ProductsOrder>()
-            //   .HasOne<Product>(po => po.Product)
-            //    .WithMany(p => p.ProductsOrders)
-            //    .HasForeignKey(po => po.ProductId);
+            modelBuilder.Entity<ProductsOrder>()
+               .HasOne<Product>(po => po.Product)
+                .WithMany(p => p.ProductsOrders)
+                .HasForeignKey(po => po.ProductId);
 
             //Transitory modelBuilder.Entity<X>().Navigation(x => x.x).AutoInclude()
 
@@ -115,13 +117,13 @@ namespace bob_api.Data
 
             //Order
             //modelBuilder.Entity<Order>().Navigation(n => n.User).AutoInclude();
-            //modelBuilder.Entity<Order>().Navigation(n => n.ProductOrders).AutoInclude();
+            modelBuilder.Entity<Order>().Navigation(n => n.ProductOrders).AutoInclude();
 
             //Category
             //modelBuilder.Entity<Category>().Navigation(c => c.Products).AutoInclude();
 
             //ProductsOrder
-            //modelBuilder.Entity<ProductsOrder>().Navigation(po => po.Product).AutoInclude();
+            modelBuilder.Entity<ProductsOrder>().Navigation(po => po.Product).AutoInclude();
 
             //Rating
             //modelBuilder.Entity<Rating>().Navigation(n => n.User).AutoInclude();
