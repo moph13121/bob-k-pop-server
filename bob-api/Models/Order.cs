@@ -21,6 +21,16 @@ namespace bob_api.Models
         //public User User { get; set; }
 
         public ICollection<ProductsOrder> ProductOrders { get; set; }
+
+        public Order () { }
+        public Order (PostOrder postOrder)
+        {
+            Id = Guid.NewGuid();
+            status = "complete";
+            CreatedAt = DateTime.UtcNow;
+            UpdatedAt = DateTime.UtcNow;
+
+        }
     }
 
     public class OrderDTO
@@ -47,10 +57,7 @@ namespace bob_api.Models
 
     public class OrderWithProductOrderDTO : OrderDTO
     {
-
         public List<ProductsOrderDTOWithProduct> ProductOrders { get; set; } = new();
-
-
 
         public OrderWithProductOrderDTO(Order order) : base(order)
         {
@@ -62,5 +69,10 @@ namespace bob_api.Models
             }
 
         }
+    }
+
+    public class PostOrder
+    {
+        public ICollection<PostProductsOrder> ProductOrders { get; set; }
     }
 }

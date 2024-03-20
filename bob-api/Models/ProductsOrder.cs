@@ -4,7 +4,7 @@ namespace bob_api.Models
 {
     public class ProductsOrder
     {
-        [Column("user_id")]
+        [Column("order_id")]
         public Guid OrderId { get; set; }
         [Column("product_id")]
         public Guid ProductId { get; set; }
@@ -15,6 +15,14 @@ namespace bob_api.Models
         public Order Order { get; set; }
 
         public Product Product { get; set; }
+
+
+        public ProductsOrder() { }
+        public ProductsOrder(PostProductsOrder postProductsOrder)
+        {
+            ProductId = postProductsOrder.ProductId;
+            Quantity = postProductsOrder.Quantity;
+        }
     }
 
     public class ProductsOrderDTO
@@ -48,5 +56,11 @@ namespace bob_api.Models
             Product = new ProductDTO(pOrder.Product);
 
         }
+    }
+
+    public class PostProductsOrder
+    {
+        public Guid ProductId { get; set; }
+        public int Quantity { get; set; }
     }
 }

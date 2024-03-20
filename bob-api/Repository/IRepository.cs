@@ -7,6 +7,7 @@ namespace bob_api.Repository
         Task<IEnumerable<T>> Get();
         Task<T> GetById(object id);
         Task<T> Create(T entity);
+        Task<ICollection<T>> CreateMultiple(ICollection<T> entities);
         Task<T> Update(T entity);
         Task<T> Delete(T entity);
 
