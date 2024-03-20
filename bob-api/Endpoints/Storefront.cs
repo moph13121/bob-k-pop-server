@@ -13,9 +13,11 @@ namespace bob_api.Endpoints
             var storefront = app.MapGroup("storefront");
             storefront.MapGet("/", GetProducts);
             storefront.MapGet("/category", GetCategories);
+            storefront.MapGet("/category/{categoryId}", GetProductsByCategoryID);
             storefront.MapGet("/ratings", GetRatings);
             storefront.MapGet("/ratings/{productId}", GetProductRatings);
             storefront.MapGet("/users", GetUsers);
+            storefront.MapPost("/addRating/{userId}/{productId}", AddRatingToProduct);
 
         }
 
@@ -32,6 +34,8 @@ namespace bob_api.Endpoints
 
             return TypedResults.Ok(output);
         }
+        
+        [ProducesResponseType(StatusCodes.Status200OK)]
 
         public static async Task<IResult> GetCategories(IRepository<Category> repository)
         {
@@ -43,6 +47,9 @@ namespace bob_api.Endpoints
             }
             return TypedResults.Ok(output);
         }
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
+
         public static async Task<IResult> GetRatings(IRepository<Rating> repository)
         {
             Payload<List<RatingDTO>> output = new();
@@ -53,6 +60,22 @@ namespace bob_api.Endpoints
             }
             return TypedResults.Ok(output);
         }
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public static async Task<IResult> GetProductsByCategoryID(IRepository<Category> repository, Guid categoryId)
+        {
+            Payload<CategoryWithProductOrderDTO> output = new Payload<CategoryWithProductOrderDTO>();
+            
+            Category request = await repository.GetById(categoryId);
+            CategoryWithProductOrderDTO result = new CategoryWithProductOrderDTO(request);
+
+            output.data = result;
+
+            return TypedResults.Ok(output);
+
+        }
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
 
         public static async Task<IResult> GetProductRatings(IRepository<Rating> repository, Guid productID)
         {
@@ -82,6 +105,35 @@ namespace bob_api.Endpoints
             }
 
             return TypedResults.Ok(output);
+        }
+
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        public static async Task<IResult> AddRatingToProduct(IRepository<Rating> ratingRepo,
+                                                             Guid productID,
+                                                             Guid userID,
+                                                             PostRating model)
+        {
+            Payload<RatingDTO> output = new Payload<RatingDTO>();
+
+            var rating = new Rating()
+            {
+                Id = Guid.NewGuid(),
+                Review = model.Review,
+                RatingValue = model.RatingValue,
+                CreatedAt = DateTime.UtcNow,
+                UpdatedAt = DateTime.UtcNow,
+                UserId = userID,
+                ProductId = productID,
+            };
+
+            var create = await ratingRepo.Create(rating);
+
+            var result = new RatingDTO(create);
+
+            output.data = result;
+
+            return TypedResults.Created(output.status, output.data);
+
         }
 
     }

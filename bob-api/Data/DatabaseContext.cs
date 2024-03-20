@@ -32,6 +32,7 @@ namespace bob_api.Data
             modelBuilder.Entity<Order>().HasData(seeder.Orders);
             modelBuilder.Entity<Rating>().HasData(seeder.Ratings);
             modelBuilder.Entity<ProductsOrder>().HasData(seeder.ProductsOrder);
+            modelBuilder.Entity<ProductCategory>().HasData(seeder.ProductCategory);
 
             //Set up keys for models
             modelBuilder.Entity<Category>()
@@ -51,6 +52,9 @@ namespace bob_api.Data
 
             modelBuilder.Entity<ProductsOrder>()
                 .HasKey(po => new {po.OrderId, po.ProductId});
+
+            modelBuilder.Entity<ProductCategory>()
+                .HasKey(pc => new { pc.ProductId, pc.CategoryId});
 
             modelBuilder.Entity<Wishlist>()
                 .HasKey(w => w.Id);
@@ -79,11 +83,7 @@ namespace bob_api.Data
             //    .HasForeignKey(o => o.UserId)
             //    .OnDelete(DeleteBehavior.Cascade);
 
-            //Join table for Product and Category
-            modelBuilder.Entity<Product>()
-                .HasMany(p => p.Categories)
-                .WithMany(c => c.Products)
-                .UsingEntity(pc => pc.ToTable("product_categories"));
+
 
             //Join table for Product and Wishlist
             //modelBuilder.Entity<Wishlist>()
@@ -101,6 +101,17 @@ namespace bob_api.Data
                .HasOne<Product>(po => po.Product)
                 .WithMany(p => p.ProductsOrders)
                 .HasForeignKey(po => po.ProductId);
+
+            //Relation for ProductsCategory
+            modelBuilder.Entity<ProductCategory>()
+                .HasOne<Category>(pc => pc.Category)
+                .WithMany(c => c.ProductCategories)
+                .HasForeignKey(pc => pc.CategoryId);
+
+            modelBuilder.Entity<ProductCategory>()
+                .HasOne<Product>(pc => pc.Product)
+                .WithMany(p => p.ProductCategories)
+                .HasForeignKey(pc => pc.ProductId);
 
             //Transitory modelBuilder.Entity<X>().Navigation(x => x.x).AutoInclude()
 
@@ -120,10 +131,13 @@ namespace bob_api.Data
             modelBuilder.Entity<Order>().Navigation(n => n.ProductOrders).AutoInclude();
 
             //Category
-            //modelBuilder.Entity<Category>().Navigation(c => c.Products).AutoInclude();
+            modelBuilder.Entity<Category>().Navigation(c => c.ProductCategories).AutoInclude();
 
             //ProductsOrder
             modelBuilder.Entity<ProductsOrder>().Navigation(po => po.Product).AutoInclude();
+
+            //ProductCategory
+            modelBuilder.Entity<ProductCategory>().Navigation(pc => pc.Product).AutoInclude();
 
             //Rating
             //modelBuilder.Entity<Rating>().Navigation(n => n.User).AutoInclude();

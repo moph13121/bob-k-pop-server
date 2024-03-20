@@ -1,8 +1,8 @@
 ﻿using bob_api.Models;
 using bob_api.Payload;
 using bob_api.Repository;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace bob_api.Endpoints
 {

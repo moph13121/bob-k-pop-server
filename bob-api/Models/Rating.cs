@@ -59,4 +59,13 @@ namespace bob_api.Models
             ProductId = rating.ProductId;
         }
     }
+
+    public class PostRating
+    {
+        public string Review { get; set; }
+
+        public int RatingValue { get; set; }
+
+
+    }
 }
