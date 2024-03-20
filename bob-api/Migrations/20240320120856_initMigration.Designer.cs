@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using bob_api.Data;
@@ -11,9 +12,11 @@ using bob_api.Data;
 namespace bob_api.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20240320120856_initMigration")]
+    partial class initMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,19 +26,19 @@ namespace bob_api.Migrations
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("CategoryProduct", b =>
-            {
-                b.Property<Guid>("CategoriesId")
-                    .HasColumnType("uuid");
+                {
+                    b.Property<Guid>("CategoriesId")
+                        .HasColumnType("uuid");
 
-                b.Property<Guid>("ProductsId")
-                    .HasColumnType("uuid");
+                    b.Property<Guid>("ProductsId")
+                        .HasColumnType("uuid");
 
-                b.HasKey("CategoriesId", "ProductsId");
+                    b.HasKey("CategoriesId", "ProductsId");
 
-                b.HasIndex("ProductsId");
+                    b.HasIndex("ProductsId");
 
-                b.ToTable("product_categories", (string)null);
-            });
+                    b.ToTable("product_categories", (string)null);
+                });
 
             modelBuilder.Entity("bob_api.Models.Category", b =>
                 {
@@ -483,45 +486,45 @@ namespace bob_api.Migrations
                 });
 
             modelBuilder.Entity("bob_api.Models.Wishlist", b =>
-            {
-                b.Property<Guid>("Id")
-                    .ValueGeneratedOnAdd()
-                    .HasColumnType("uuid")
-                    .HasColumnName("id");
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id");
 
-                b.Property<DateTime>("CreatedAt")
-                    .HasColumnType("timestamp with time zone")
-                    .HasColumnName("created_at");
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at");
 
-                b.Property<DateTime>("UpdatedAt")
-                    .HasColumnType("timestamp with time zone")
-                    .HasColumnName("updated_at");
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("updated_at");
 
-                b.Property<Guid>("UserId")
-                    .HasColumnType("uuid")
-                    .HasColumnName("user_id");
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("user_id");
 
-                b.HasKey("Id");
+                    b.HasKey("Id");
 
-                b.HasIndex("UserId");
+                    b.HasIndex("UserId");
 
-                b.ToTable("Wishlist");
-            });
+                    b.ToTable("Wishlist");
+                });
 
             modelBuilder.Entity("CategoryProduct", b =>
-            {
-                b.HasOne("bob_api.Models.Category", null)
-                    .WithMany()
-                    .HasForeignKey("CategoriesId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+                {
+                    b.HasOne("bob_api.Models.Category", null)
+                        .WithMany()
+                        .HasForeignKey("CategoriesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                b.HasOne("bob_api.Models.Product", null)
-                    .WithMany()
-                    .HasForeignKey("ProductsId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
-            });
+                    b.HasOne("bob_api.Models.Product", null)
+                        .WithMany()
+                        .HasForeignKey("ProductsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
 
             modelBuilder.Entity("bob_api.Models.Order", b =>
                 {
@@ -533,51 +536,51 @@ namespace bob_api.Migrations
                 });
 
             modelBuilder.Entity("bob_api.Models.Product", b =>
-            {
-                b.HasOne("bob_api.Models.Wishlist", null)
-                    .WithMany("Products")
-                    .HasForeignKey("WishlistId");
-            });
+                {
+                    b.HasOne("bob_api.Models.Wishlist", null)
+                        .WithMany("Products")
+                        .HasForeignKey("WishlistId");
+                });
 
             modelBuilder.Entity("bob_api.Models.ProductsOrder", b =>
-            {
-                b.HasOne("bob_api.Models.Order", "Order")
-                    .WithMany("ProductOrders")
-                    .HasForeignKey("OrderId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+                {
+                    b.HasOne("bob_api.Models.Order", "Order")
+                        .WithMany("ProductOrders")
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                b.HasOne("bob_api.Models.Product", "Product")
-                    .WithMany("ProductsOrders")
-                    .HasForeignKey("ProductId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+                    b.HasOne("bob_api.Models.Product", "Product")
+                        .WithMany("ProductsOrders")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                b.Navigation("Order");
+                    b.Navigation("Order");
 
-                b.Navigation("Product");
-            });
+                    b.Navigation("Product");
+                });
 
             modelBuilder.Entity("bob_api.Models.Wishlist", b =>
-            {
-                b.HasOne("bob_api.Models.User", "User")
-                    .WithMany()
-                    .HasForeignKey("UserId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired();
+                {
+                    b.HasOne("bob_api.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                b.Navigation("User");
-            });
+                    b.Navigation("User");
+                });
 
             modelBuilder.Entity("bob_api.Models.Order", b =>
-            {
-                b.Navigation("ProductOrders");
-            });
+                {
+                    b.Navigation("ProductOrders");
+                });
 
             modelBuilder.Entity("bob_api.Models.Product", b =>
-            {
-                b.Navigation("ProductsOrders");
-            });
+                {
+                    b.Navigation("ProductsOrders");
+                });
 
             modelBuilder.Entity("bob_api.Models.User", b =>
                 {
@@ -585,9 +588,9 @@ namespace bob_api.Migrations
                 });
 
             modelBuilder.Entity("bob_api.Models.Wishlist", b =>
-            {
-                b.Navigation("Products");
-            });
+                {
+                    b.Navigation("Products");
+                });
 #pragma warning restore 612, 618
         }
     }

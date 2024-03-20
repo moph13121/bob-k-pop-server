@@ -96,8 +96,13 @@ namespace bob_api.Endpoints
         [ProducesResponseType(StatusCodes.Status200OK)]
         public static async Task<IResult> GetUsers(IRepository<User> repository)
         {
-            Payload<List<User>> output = new();
-            output.data = [.. await repository.Get()];
+            Payload<List<UserDTO>> output = new();
+            output.data = new();
+
+            foreach (User user in await repository.Get())
+            {
+                output.data.Add(new UserDTO(user));
+            }
 
             return TypedResults.Ok(output);
         }

@@ -124,7 +124,7 @@ namespace bob_api.Data
             //User
             //modelBuilder.Entity<User>().Navigation(u => u.Ratings).AutoInclude();
             //modelBuilder.Entity<User>().Navigation(u => u.Wishlists).AutoInclude();
-            //modelBuilder.Entity<User>().Navigation(u => u.Orders).AutoInclude();
+            modelBuilder.Entity<User>().Navigation(u => u.Orders).AutoInclude();
 
             //Order
             //modelBuilder.Entity<Order>().Navigation(n => n.User).AutoInclude();

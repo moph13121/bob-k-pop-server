@@ -31,6 +31,14 @@ namespace bob_api.Repository
             await _db.SaveChangesAsync();
             return entity;
         }
+
+        public async Task<ICollection<T>> CreateMultiple(ICollection<T> entities)
+        {
+            await _table.AddRangeAsync(entities);
+            await _db.SaveChangesAsync();
+            return entities;
+        }
+
         public async Task<T> Update(T entity)
         {
             _table.Attach(entity);
