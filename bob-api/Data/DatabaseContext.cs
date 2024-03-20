@@ -15,8 +15,25 @@ namespace bob_api.Data
             this.Database.EnsureCreated();
         }
 
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql(_connectionString);
+            optionsBuilder.LogTo(message => Debug.WriteLine(message)); //see the sql EF using in the console
+            optionsBuilder.EnableSensitiveDataLogging();
+        }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            Seeder seeder = new Seeder();
+
+            modelBuilder.Entity<Product>().HasData(seeder.Products);
+            modelBuilder.Entity<Category>().HasData(seeder.Categories);
+            modelBuilder.Entity<User>().HasData(seeder.Users);
+            modelBuilder.Entity<Order>().HasData(seeder.Orders);
+            modelBuilder.Entity<Rating>().HasData(seeder.Ratings);
+            modelBuilder.Entity<ProductsOrder>().HasData(seeder.ProductsOrder);
+            modelBuilder.Entity<ProductCategory>().HasData(seeder.ProductCategory);
+
             //Set up keys for models
             modelBuilder.Entity<Category>()
                 .HasKey(c => c.Id);
@@ -36,44 +53,43 @@ namespace bob_api.Data
             modelBuilder.Entity<ProductsOrder>()
                 .HasKey(po => new {po.OrderId, po.ProductId});
 
+            modelBuilder.Entity<ProductCategory>()
+                .HasKey(pc => new { pc.ProductId, pc.CategoryId});
+
             modelBuilder.Entity<Wishlist>()
                 .HasKey(w => w.Id);
 
             //Add foreign-key relations
-            modelBuilder.Entity<Rating>()
-                .HasOne<User>(r => r.User)
-                .WithMany(u => u.Ratings)
-                .HasForeignKey(r => r.UserId);
+            //modelBuilder.Entity<Rating>()
+            //    .HasOne<User>(r => r.User)
+            //    .WithMany(u => u.Ratings)
+            //    .HasForeignKey(r => r.UserId);
 
-            modelBuilder.Entity<Rating>()
-                .HasOne<Product>(r => r.Product)
-                .WithMany(p => p.Ratings)
-                .HasForeignKey(r => r.ProductId)
-                .OnDelete(DeleteBehavior.Cascade);
+            //modelBuilder.Entity<Rating>()
+            //    .HasOne<Product>(r => r.Product)
+            //    .WithMany(p => p.Ratings)
+            //    .HasForeignKey(r => r.ProductId)
+            //    .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<Wishlist>()
-                .HasOne<User>(w => w.User)
-                .WithMany(u => u.Wishlists)
-                .HasForeignKey(w => w.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+            //modelBuilder.Entity<Wishlist>()
+            //    .HasOne<User>(w => w.User)
+            //    .WithMany(u => u.Wishlists)
+            //    .HasForeignKey(w => w.UserId)
+            //    .OnDelete(DeleteBehavior.Cascade);
 
-            modelBuilder.Entity<Order>()
-                .HasOne<User>(o => o.User) 
-                .WithMany(u => u.Orders)
-                .HasForeignKey(o => o.UserId)
-                .OnDelete(DeleteBehavior.Cascade);
+            //modelBuilder.Entity<Order>()
+            //    .HasOne<User>(o => o.User) 
+            //    .WithMany(u => u.Orders)
+            //    .HasForeignKey(o => o.UserId)
+            //    .OnDelete(DeleteBehavior.Cascade);
 
-            //Join table for Product and Category
-            modelBuilder.Entity<Product>()
-                .HasMany(p => p.Categories)
-                .WithMany(c => c.Products)
-                .UsingEntity(pc => pc.ToTable("product_categories"));
+
 
             //Join table for Product and Wishlist
-            modelBuilder.Entity<Wishlist>()
-                .HasMany<Product>(w => w.Products)
-                .WithMany(p => p.Wishlists)
-                .UsingEntity(wp => wp.ToTable("product_wishlist"));
+            //modelBuilder.Entity<Wishlist>()
+            //    .HasMany<Product>(w => w.Products)
+            //    .WithMany(p => p.Wishlists)
+            //    .UsingEntity(wp => wp.ToTable("product_wishlist"));
 
             //Relation for ProductsOrder
             modelBuilder.Entity<ProductsOrder>()
@@ -86,13 +102,50 @@ namespace bob_api.Data
                 .WithMany(p => p.ProductsOrders)
                 .HasForeignKey(po => po.ProductId);
 
-            
+            //Relation for ProductsCategory
+            modelBuilder.Entity<ProductCategory>()
+                .HasOne<Category>(pc => pc.Category)
+                .WithMany(c => c.ProductCategories)
+                .HasForeignKey(pc => pc.CategoryId);
 
-        }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseNpgsql(_connectionString);
-            optionsBuilder.LogTo(message => Debug.WriteLine(message)); //see the sql EF using in the console
+            modelBuilder.Entity<ProductCategory>()
+                .HasOne<Product>(pc => pc.Product)
+                .WithMany(p => p.ProductCategories)
+                .HasForeignKey(pc => pc.ProductId);
+
+            //Transitory modelBuilder.Entity<X>().Navigation(x => x.x).AutoInclude()
+
+            //Product
+            //modelBuilder.Entity<Product>().Navigation(p => p.Categories).AutoInclude();
+            //modelBuilder.Entity<Product>().Navigation(p => p.Ratings).AutoInclude();
+            //modelBuilder.Entity<Product>().Navigation(p => p.ProductsOrders).AutoInclude();
+
+
+            //User
+            //modelBuilder.Entity<User>().Navigation(u => u.Ratings).AutoInclude();
+            //modelBuilder.Entity<User>().Navigation(u => u.Wishlists).AutoInclude();
+            modelBuilder.Entity<User>().Navigation(u => u.Orders).AutoInclude();
+
+            //Order
+            //modelBuilder.Entity<Order>().Navigation(n => n.User).AutoInclude();
+            modelBuilder.Entity<Order>().Navigation(n => n.ProductOrders).AutoInclude();
+
+            //Category
+            modelBuilder.Entity<Category>().Navigation(c => c.ProductCategories).AutoInclude();
+
+            //ProductsOrder
+            modelBuilder.Entity<ProductsOrder>().Navigation(po => po.Product).AutoInclude();
+
+            //ProductCategory
+            modelBuilder.Entity<ProductCategory>().Navigation(pc => pc.Product).AutoInclude();
+
+            //Rating
+            //modelBuilder.Entity<Rating>().Navigation(n => n.User).AutoInclude();
+            //modelBuilder.Entity<Rating>().Navigation(n => n.Product).AutoInclude();
+
+            //Wishlist
+            modelBuilder.Entity<Wishlist>().Navigation(w => w.Products).AutoInclude();
+
 
         }
 

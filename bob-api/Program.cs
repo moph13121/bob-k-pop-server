@@ -3,11 +3,12 @@ using bob_api.Data;
 using bob_api.Models;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using System.Text.Json.Serialization;
+using bob_api.Endpoints;
+using bob_api.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -47,11 +48,15 @@ builder.Services.AddSwaggerGen(option =>
 builder.Services.AddProblemDetails();
 builder.Services.AddApiVersioning();
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
-builder.Services.AddDbContext<DatabaseContext>(
-    opt => opt.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnectionString"))
-    );
+builder.Services.AddDbContext<DatabaseContext>();
 
-
+builder.Services.AddScoped<IRepository<Product>, Repository<Product>>();
+builder.Services.AddScoped<IRepository<Category>, Repository<Category>>();
+builder.Services.AddScoped<IRepository<Rating>, Repository<Rating>>();
+builder.Services.AddScoped<IRepository<User>, Repository<User>>();
+//Cart
+builder.Services.AddScoped<IRepository<ProductsOrder>, Repository<ProductsOrder>>();
+builder.Services.AddScoped<IRepository<Order>, Repository<Order>>();
 builder.Services.AddScoped<TokenService, TokenService>();
 
 
@@ -112,5 +117,11 @@ app.UseStatusCodePages();
 app.UseAuthentication();
 app.UseAuthorization();
 
+app.StorefrontEndpoint();
+app.CartEndpoint();
+
 app.MapControllers();
 app.Run();
+
+
+//public partial class Program { }
