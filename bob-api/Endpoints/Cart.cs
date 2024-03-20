@@ -13,7 +13,7 @@ namespace bob_api.Endpoints
         {
             var cart = app.MapGroup("cart");
             //cart.MapGet("/{orderID}", GetOrderByID);
-            cart.MapGet("/{userID}", GetProductsByUserID);
+            cart.MapGet("/history/{userID}", GetOrderHistoryByUser);
         }
 
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -31,13 +31,13 @@ namespace bob_api.Endpoints
         }
 
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public static async Task<IResult> GetProductsByUserID(IRepository<Order> repository, Guid userID)
+        public static async Task<IResult> GetOrderHistoryByUser(IRepository<User> repository, Guid userID)
         {
-            Payload<OrderWithProductOrderDTO> output = new();
-            IQueryable<Order> order = repository.GetByCondition(o => o.UserId == userID);
-            var orderObject = order.First();
+            Payload<UserOrderHistoryDTO> output = new();
+            IQueryable<User> user = repository.GetByCondition(o => o.Id == userID);
+            var userObject = user.First();
 
-            output.data = new OrderWithProductOrderDTO(orderObject);
+            output.data = new UserOrderHistoryDTO(userObject);
 
             return TypedResults.Ok(output);
 
