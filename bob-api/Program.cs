@@ -100,7 +100,16 @@ builder.Services.AddAuthentication(options =>
             ),
         };
     });
-
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowOrigin",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:3000") // TODO: Should be changed to frontend hosting service URL later on
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
 
 var app = builder.Build();
 
@@ -111,6 +120,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+// CORS
+app.UseCors("AllowOrigin");
 app.UseHttpsRedirection();
 
 app.UseStatusCodePages();
