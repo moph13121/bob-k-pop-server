@@ -66,7 +66,7 @@ namespace bob_api.Endpoints
         {
             Payload<CategoryWithProductOrderDTO> output = new Payload<CategoryWithProductOrderDTO>();
 
-            Category request = repository.GetByCondition(c => c.Name == categoryName).FirstOrDefault();
+            Category request = repository.GetByCondition(c => c.Name.ToLower() == categoryName.ToLower()).FirstOrDefault();
 
             CategoryWithProductOrderDTO result = new CategoryWithProductOrderDTO(request);
 
