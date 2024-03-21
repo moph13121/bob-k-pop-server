@@ -13,7 +13,7 @@ namespace bob_api.Endpoints
             var storefront = app.MapGroup("storefront");
             storefront.MapGet("/", GetProducts);
             storefront.MapGet("/category", GetCategories);
-            storefront.MapGet("/category/{categoryId}", GetProductsByCategoryID);
+            storefront.MapGet("/category/{categoryName}", GetProductsByCategoryName);
             storefront.MapGet("/ratings", GetRatings);
             storefront.MapGet("/ratings/{productId}", GetProductRatings);
             storefront.MapGet("/users", GetUsers);
@@ -62,11 +62,12 @@ namespace bob_api.Endpoints
         }
 
         [ProducesResponseType(StatusCodes.Status200OK)]
-        public static async Task<IResult> GetProductsByCategoryID(IRepository<Category> repository, Guid categoryId)
+        public static async Task<IResult> GetProductsByCategoryName(IRepository<Category> repository, string categoryName)
         {
             Payload<CategoryWithProductOrderDTO> output = new Payload<CategoryWithProductOrderDTO>();
-            
-            Category request = await repository.GetById(categoryId);
+
+            Category request = repository.GetByCondition(c => c.Name == categoryName).FirstOrDefault();
+
             CategoryWithProductOrderDTO result = new CategoryWithProductOrderDTO(request);
 
             output.data = result;
