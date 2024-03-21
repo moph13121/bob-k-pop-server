@@ -68,6 +68,10 @@ namespace bob_api.Endpoints
 
             Category request = repository.GetByCondition(c => c.Name.ToLower() == categoryName.ToLower()).FirstOrDefault();
 
+            if (request == null)
+            {
+                return TypedResults.BadRequest();
+            }
             CategoryWithProductOrderDTO result = new CategoryWithProductOrderDTO(request);
 
             output.data = result;
