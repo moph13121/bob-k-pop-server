@@ -12,7 +12,7 @@ using bob_api.Data;
 namespace bob_api.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20240321095219_InitialMigration")]
+    [Migration("20240321123232_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -52,129 +52,129 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(357),
+                            Id = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7482),
                             Name = "Girl",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(357)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7482)
                         },
                         new
                         {
-                            Id = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(320),
+                            Id = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7452),
                             Name = "Boy",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(323)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7453)
                         },
                         new
                         {
-                            Id = new Guid("79ffc79c-1203-45d7-a60d-522116a07589"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(359),
+                            Id = new Guid("c8f4a413-bd0e-42e4-a775-fddf305e22f5"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7483),
                             Name = "BTS",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(359)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7483)
                         },
                         new
                         {
-                            Id = new Guid("8d7b666b-d420-49fc-921e-507fb60f0c56"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(360),
+                            Id = new Guid("e204340b-de50-4cdd-b25e-1729e9c9d3d7"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7484),
                             Name = "StrayKids",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(361)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7484)
                         },
                         new
                         {
-                            Id = new Guid("c0a87bf6-0057-48c8-a0a3-5a1548e7e827"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(362),
+                            Id = new Guid("05e6208b-0ffa-4ed5-9ad9-082b83670d68"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7485),
                             Name = "BigBang",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(362)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7486)
                         },
                         new
                         {
-                            Id = new Guid("651ec71d-6595-4da6-9208-9ee50c3db5d3"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(363),
+                            Id = new Guid("5707502c-c186-4f86-a891-c92ed97db82a"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7487),
                             Name = "Ateez",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(363)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7487)
                         },
                         new
                         {
-                            Id = new Guid("35db38c3-8949-4c43-bf66-2379c5f40d12"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(364),
+                            Id = new Guid("f6d7f069-e98c-4ae8-8527-541d7276ca88"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7488),
                             Name = "Blackpink",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(365)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7488)
                         },
                         new
                         {
-                            Id = new Guid("71b337d1-044b-4e1d-a006-c1ac44b390fd"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(366),
+                            Id = new Guid("13ead0ac-aefb-42ec-87e0-f10d497edf58"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7489),
                             Name = "Red Velvet",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(366)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7489)
                         },
                         new
                         {
-                            Id = new Guid("fb06df6e-5c03-40a0-a393-36046864dd38"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(367),
+                            Id = new Guid("1cd6a495-e77c-48d2-b613-c20016cb0a55"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7490),
                             Name = "LE SSERAFIM.",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(367)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7490)
                         },
                         new
                         {
-                            Id = new Guid("c2999434-3a40-4773-9874-3480b407b468"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(370),
+                            Id = new Guid("fb41bb3d-4f49-4c2e-b5f2-b160121cfc90"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7493),
                             Name = "(G)I-DLE.",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(370)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7493)
                         },
                         new
                         {
-                            Id = new Guid("783a12af-a925-456a-82b1-8a6d999998dc"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(371),
+                            Id = new Guid("77ffaeb9-d322-42e5-b041-bbdfdb8c93c7"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7494),
                             Name = "Girls Generation",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(371)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7494)
                         },
                         new
                         {
-                            Id = new Guid("f4ccb7fe-4090-4e30-8ade-1a3be7c8c266"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(372),
+                            Id = new Guid("534128af-7a8f-40df-9580-102afdf11196"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7495),
                             Name = "EXO",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(372)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7496)
                         },
                         new
                         {
-                            Id = new Guid("7fc4d300-3c0a-4a94-ac2d-2c1572270799"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(374),
+                            Id = new Guid("a9a7bdd5-3c4b-4add-87dc-4e3e5b03b0d0"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7497),
                             Name = "Seventeen",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(375)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7498)
                         },
                         new
                         {
-                            Id = new Guid("b064dda5-3ae4-43f4-a265-604ee6b8bda6"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(373),
+                            Id = new Guid("a87a41fb-9903-4900-938c-2d54ff9352da"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7496),
                             Name = "Twice",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(373)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7497)
                         },
                         new
                         {
-                            Id = new Guid("cb2b831f-9fd1-43d8-867b-f03067414658"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(375),
+                            Id = new Guid("3a622da7-f854-47e1-a80f-15afc419e925"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7499),
                             Name = "LightStick",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(376)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7499)
                         },
                         new
                         {
-                            Id = new Guid("713af980-25c7-4527-b563-d20941644593"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(377),
+                            Id = new Guid("698b502f-c255-4929-8be8-ce7045db418f"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7500),
                             Name = "Jewelry",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(377)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7500)
                         },
                         new
                         {
-                            Id = new Guid("ebe643e6-9dae-4c28-b85d-95e5b7737167"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(378),
+                            Id = new Guid("24a4b675-0ce9-48ac-a474-601e68bfefe3"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7501),
                             Name = "Merch",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(378)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7501)
                         },
                         new
                         {
-                            Id = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(380),
+                            Id = new Guid("9d698a70-4209-40a5-8064-93e005d60ede"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7503),
                             Name = "Music",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(381)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7503)
                         });
                 });
 
@@ -211,10 +211,10 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3b8b397e-ac12-4c33-82a9-b830a207a079"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(628),
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(628),
-                            UserId = new Guid("3a221282-4db5-491d-a990-0c08df2ee9e7"),
+                            Id = new Guid("99c9725b-aa33-4c5b-bebd-c47c67e94890"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7679),
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7679),
+                            UserId = new Guid("cba31aa2-9b5e-4792-b9eb-dbca58edbdcc"),
                             status = "Pending"
                         });
                 });
@@ -269,300 +269,300 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("345175da-d1be-48b4-93e5-bd559957eeca"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(389),
+                            Id = new Guid("f2d059b9-c2bc-4836-8d19-8d50112aca14"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7512),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-az04-ateez-leak-earring-removebg-preview.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Ateez Leak Earring",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(389)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7512)
                         },
                         new
                         {
-                            Id = new Guid("1d7d0e0a-a2fa-460d-b15f-9d9d92fe4b83"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(393),
+                            Id = new Guid("3eec0fe1-41c7-4ad5-84b8-981d8ecf8dad"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7515),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-az05-ateez-range-piercing-earring-earcuff-removebg-preview.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-az05-ateez-range-piercing-earring-earcuff-removebg-preview.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Ateez Earcuff",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(393)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7515)
                         },
                         new
                         {
-                            Id = new Guid("2720e32e-96e3-446c-a331-9b2bfe75d9b6"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(395),
+                            Id = new Guid("6f1a4a15-00b7-4ae4-a5d6-4be48183ce82"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7517),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-bs110-bts-nesto-ring-removebg-preview.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-bs110-bts-nesto-ring-removebg-preview.png",
                             Price = 15,
                             Stock = 10,
                             Title = "BTS Nesto Ring",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(395)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7517)
                         },
                         new
                         {
-                            Id = new Guid("0068505e-4925-4b61-9cdc-4173e8946e9e"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(396),
+                            Id = new Guid("1bba70b6-65b3-49c5-a420-4bc6006a9c2e"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7519),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-bs114-bts-mao-earring-ear-cuff-piercing-removebg-preview.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-bs114-bts-mao-earring-ear-cuff-piercing-removebg-preview.png",
                             Price = 11,
                             Stock = 10,
                             Title = "BTS Mao Earring",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(397)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7519)
                         },
                         new
                         {
-                            Id = new Guid("716ba239-89ce-470d-ba4e-a455171d98f0"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(398),
+                            Id = new Guid("c515ea48-187e-4a80-af4d-6f835c8a531d"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7520),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-ex234-exo-transformer-ring-removebg-preview.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-ex234-exo-transformer-ring-removebg-preview.png",
                             Price = 11,
                             Stock = 10,
                             Title = "Exo Transformer Ring",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(398)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7520)
                         },
                         new
                         {
-                            Id = new Guid("347390ce-54f8-416b-8c91-8872f42f0623"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(400),
+                            Id = new Guid("c2db1196-6021-4bdb-aa22-dd3909bf3f33"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7522),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-ex236-exo-new-emblem-necklace-removebg-preview.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-ex236-exo-new-emblem-necklace-removebg-preview.png",
                             Price = 11,
                             Stock = 10,
                             Title = "Exo Emblem Necklace",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(400)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7522)
                         },
                         new
                         {
-                            Id = new Guid("5524939f-695e-4de0-8c11-e0a31dbdd126"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(401),
+                            Id = new Guid("3c6c8dd5-a9ee-43d3-b3bf-3ec09bc4e829"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7523),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_girls/Blackpink_Lisa_necklace-removebg-preview.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_girls/Blackpink_Lisa_necklace-removebg-preview.png",
                             Price = 10,
                             Stock = 10,
                             Title = "BlackPink Lisa Necklace",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(402)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7523)
                         },
                         new
                         {
-                            Id = new Guid("a4109235-5ca1-41e2-b536-dc38cb73816e"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(405),
+                            Id = new Guid("c96640a7-9aff-4e6a-875a-a8085554368d"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7526),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_girls/blackpink_Lisa_braclet-removebg-preview.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_girls/blackpink_Lisa_braclet-removebg-preview.png",
                             Price = 10,
                             Stock = 10,
                             Title = "BlackPink Lisa Bracelet",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(405)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7526)
                         },
                         new
                         {
-                            Id = new Guid("ee123577-64d1-45c6-bf8f-6142f059c928"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(406),
+                            Id = new Guid("6bb12109-c97c-42d5-9302-d5c046cedf09"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7528),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_girls/-sn10-girls-generation-smile-earring-piercing-removebg-preview.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_girls/-sn10-girls-generation-smile-earring-piercing-removebg-preview.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Girls Generation Smile Earring",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(406)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7528)
                         },
                         new
                         {
-                            Id = new Guid("f6e6bb73-bd82-4c07-99f6-1fbc278e8263"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(408),
+                            Id = new Guid("ab95dcbf-0428-417f-ac4e-8b9604000d56"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7529),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_girls/-sn13-girls-generation-cubic-ribbon-earrings-removebg-preview.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_girls/-sn13-girls-generation-cubic-ribbon-earrings-removebg-preview.png   ",
                             Price = 10,
                             Stock = 10,
                             Title = "Girls Generation Ribbon Earring",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(408)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7529)
                         },
                         new
                         {
-                            Id = new Guid("22b43960-2b8d-4d5e-a20c-0817cf26ceae"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(409),
+                            Id = new Guid("80f2dcf0-34fb-4d03-92b1-68829064bc9e"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7530),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_boys/ATEEZ%20-%20THE%20WORLD%20EP%202%20%20OUTLAW.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_boys/ATEEZ%20-%20THE%20WORLD%20EP%202%20%20OUTLAW.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Ateez - The World EP 2 OUTLAW",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(410)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7531)
                         },
                         new
                         {
-                            Id = new Guid("d8168f2f-1fd2-4a42-9966-96dd0212108b"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(412),
+                            Id = new Guid("f9eb4ef3-2d07-4f6b-babf-2caacf84b9da"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7532),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_boys/BTS%20JHOPE%20ALBUM%20-%20JACK%20IN%20THE%20BOX.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_boys/BTS%20JHOPE%20ALBUM%20-%20JACK%20IN%20THE%20BOX.png",
                             Price = 10,
                             Stock = 10,
                             Title = "JHope - JACK IN THE BOX",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(412)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7532)
                         },
                         new
                         {
-                            Id = new Guid("e6a11740-db8b-4f1f-bd6c-328af93aae04"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(414),
+                            Id = new Guid("94682e19-fba2-419c-9982-039d61e9c6a8"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7533),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_boys/Stray%20Kids%20-%20MAXIDENT.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_boys/Stray%20Kids%20-%20MAXIDENT.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Stray Kids - MAXIDENT",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(414)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7534)
                         },
                         new
                         {
-                            Id = new Guid("4bd80771-b963-40de-91c4-6306fe54e26c"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(415),
+                            Id = new Guid("3607b543-ca35-488d-a33b-b8ecf834a55f"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7536),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_boys/SEVENTEEN%20-%20FML%2010th%20Mini%20Album.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_boys/SEVENTEEN%20-%20FML%2010th%20Mini%20Album.png",
                             Price = 10,
                             Stock = 10,
                             Title = "SEVENTEEN - FML 10th Mini Album",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(415)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7536)
                         },
                         new
                         {
-                            Id = new Guid("7adf4645-d242-4cd5-9348-1d0249817e82"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(417),
+                            Id = new Guid("45da42d4-4358-4017-9c0f-5e40cb25af23"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7537),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/(G)I-DLE%20-%20I%20FEEL%206th%20Mini%20Album.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_girls/(G)I-DLE%20-%20I%20FEEL%206th%20Mini%20Album.png",
                             Price = 10,
                             Stock = 10,
                             Title = "(G)I-DLE - I FEEL 6th Mini Album",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(417)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7537)
                         },
                         new
                         {
-                            Id = new Guid("d559032c-dc8b-4998-bf91-4c70c8bb67b4"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(460),
+                            Id = new Guid("2f8fd89e-7adb-4620-83a4-c26eb20d7733"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7540),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/RED_VELVET%20ALBUM.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Red Velvet - Album",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(460)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7540)
                         },
                         new
                         {
-                            Id = new Guid("bd6db80f-3fe0-4bcc-82c4-b936a3cfe519"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(462),
+                            Id = new Guid("727c0392-49ea-4ed9-b052-2e09b8c91303"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7541),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/LE%20SSERAFIM%20ALBUM-%20ANTIFRAGILE.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_girls/RED_VELVET%20ALBUM.png",
                             Price = 10,
                             Stock = 10,
                             Title = "LE SSERAFIM - ANTIFRAGILE",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(462)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7541)
                         },
                         new
                         {
-                            Id = new Guid("dc5c2184-4b59-4961-a245-bf15f16aa871"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(464),
+                            Id = new Guid("db62b370-b1bd-47c6-9b5b-07ef3c8698d8"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7543),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/BLACKPINK%20LISA%20ALBUM%20-%20LALISA.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_girls/BLACKPINK%20LISA%20ALBUM%20-%20LALISA.png",
                             Price = 10,
                             Stock = 10,
                             Title = "BlackPink Lisa - LALISA",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(464)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7543)
                         },
                         new
                         {
-                            Id = new Guid("9dc7ce12-5b6d-41c2-991b-adaeb9757abc"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(466),
+                            Id = new Guid("0aa0ee11-c7ad-4883-93a8-39a362e6b378"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7544),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/TWICE%20ALBUM%20-%20WITH%20YOU-TH.jpg",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_girls/TWICE%20ALBUM%20-%20WITH%20YOU-TH.jpg",
                             Price = 10,
                             Stock = 10,
                             Title = "Twice - With You",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(466)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7544)
                         },
                         new
                         {
-                            Id = new Guid("a44475aa-636c-45b1-b018-426d5d5d3a59"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(467),
+                            Id = new Guid("1ac2a2bf-3642-4e37-8a46-6a0512c6bcff"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7545),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_boys/BTS%20Official%20Light%20Stick%20Special%20Edition.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_boys/BTS%20Official%20Light%20Stick%20Special%20Edition.png",
                             Price = 10,
                             Stock = 10,
                             Title = "BTS Official Light Stick Special Edition",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(468)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7546)
                         },
                         new
                         {
-                            Id = new Guid("1328f1e4-0b59-4fe0-847a-3a151e5bdcfb"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(469),
+                            Id = new Guid("d34afa39-7633-4916-8913-02e5ca9342eb"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7547),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_boys/BIGBANG%20OFFICIAL%20LIGHT%20STICK%20VER%204.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_boys/BIGBANG%20OFFICIAL%20LIGHT%20STICK%20VER%204.png",
                             Price = 10,
                             Stock = 10,
                             Title = "BigBang Official Light Stick ",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(469)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7547)
                         },
                         new
                         {
-                            Id = new Guid("faa81faf-2da6-4432-91dc-e7ff40804916"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(471),
+                            Id = new Guid("09b90a7e-3bb9-40ed-a0e6-28274f39cfb2"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7548),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_boys/ATEEZ%20OFFICIAL%20LIGHTSTICK%20VER%202%20.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_boys/ATEEZ%20OFFICIAL%20LIGHTSTICK%20VER%202%20.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Ateez Official Light Ver.2",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(471)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7548)
                         },
                         new
                         {
-                            Id = new Guid("855b187b-90e0-440b-af95-f201d7abf426"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(472),
+                            Id = new Guid("23121f70-0854-4c66-8166-912d14a038b9"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7550),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_girls/BLACKPINK%20OFFICIAL%20LIGHTSTICK%20VER%202%20%E2%80%93%20NEW%20MODEL.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_girls/BLACKPINK%20OFFICIAL%20LIGHTSTICK%20VER%202%20%E2%80%93%20NEW%20MODEL.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Blackpink Official Lightstick Ver.2",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(473)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7550)
                         },
                         new
                         {
-                            Id = new Guid("b599059f-1fef-435b-8e4b-b186f58f8530"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(475),
+                            Id = new Guid("5d8a724f-8c39-452b-bd16-d999c98ab7bb"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7552),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                             Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_girls/GIDLE%20OFFICIAL%20LIGHTSTICK%20VER..png",
                             Price = 10,
                             Stock = 10,
                             Title = "(G)I-DLE.",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(476)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7553)
                         },
                         new
                         {
-                            Id = new Guid("a9a6354a-b307-4e2f-a3ff-08ac4e774dd4"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(477),
+                            Id = new Guid("afd5ca99-949b-42dd-9232-b749e0bc9d88"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7554),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_girls/LE%20SSERAFIM%20OFFICIAL%20LIGHTSTICK.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_girls/GIDLE%20OFFICIAL%20LIGHTSTICK%20VER..png",
                             Price = 10,
                             Stock = 10,
                             Title = "LE SSERAFIM Official Lightstick",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(477)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7554)
                         },
                         new
                         {
-                            Id = new Guid("ad6db8dc-79e3-494d-9c3e-3a57418ddbe9"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(479),
+                            Id = new Guid("a27ab940-43af-4722-866b-fe2cb7b2f5a4"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7555),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_girls/RED%20VELVET%20OFFICIAL%20LIGHTSTICK.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_girls/RED%20VELVET%20OFFICIAL%20LIGHTSTICK.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Red Velvet Official Lightstick",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(479)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7555)
                         },
                         new
                         {
-                            Id = new Guid("5497fb11-da6a-4ba2-b09f-0cff76b57c78"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(480),
+                            Id = new Guid("622d2a0b-ca1b-4501-8922-7e4cec000d14"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7556),
                             Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                            Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_girls/GIRLS_GENERATION_OFFICIAL_LIGHTSTICK.png",
+                            Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_girls/GIRLS_GENERATION_OFFICIAL_LIGHTSTICK.png",
                             Price = 10,
                             Stock = 10,
                             Title = "Girls Generation Official Lightstick",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(480)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7557)
                         });
                 });
 
@@ -583,408 +583,408 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            ProductId = new Guid("345175da-d1be-48b4-93e5-bd559957eeca"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("f2d059b9-c2bc-4836-8d19-8d50112aca14"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("345175da-d1be-48b4-93e5-bd559957eeca"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("f2d059b9-c2bc-4836-8d19-8d50112aca14"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("345175da-d1be-48b4-93e5-bd559957eeca"),
-                            CategoryId = new Guid("651ec71d-6595-4da6-9208-9ee50c3db5d3")
+                            ProductId = new Guid("f2d059b9-c2bc-4836-8d19-8d50112aca14"),
+                            CategoryId = new Guid("5707502c-c186-4f86-a891-c92ed97db82a")
                         },
                         new
                         {
-                            ProductId = new Guid("1d7d0e0a-a2fa-460d-b15f-9d9d92fe4b83"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("3eec0fe1-41c7-4ad5-84b8-981d8ecf8dad"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("1d7d0e0a-a2fa-460d-b15f-9d9d92fe4b83"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("3eec0fe1-41c7-4ad5-84b8-981d8ecf8dad"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("1d7d0e0a-a2fa-460d-b15f-9d9d92fe4b83"),
-                            CategoryId = new Guid("651ec71d-6595-4da6-9208-9ee50c3db5d3")
+                            ProductId = new Guid("3eec0fe1-41c7-4ad5-84b8-981d8ecf8dad"),
+                            CategoryId = new Guid("5707502c-c186-4f86-a891-c92ed97db82a")
                         },
                         new
                         {
-                            ProductId = new Guid("2720e32e-96e3-446c-a331-9b2bfe75d9b6"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("6f1a4a15-00b7-4ae4-a5d6-4be48183ce82"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("2720e32e-96e3-446c-a331-9b2bfe75d9b6"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("6f1a4a15-00b7-4ae4-a5d6-4be48183ce82"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("2720e32e-96e3-446c-a331-9b2bfe75d9b6"),
-                            CategoryId = new Guid("79ffc79c-1203-45d7-a60d-522116a07589")
+                            ProductId = new Guid("6f1a4a15-00b7-4ae4-a5d6-4be48183ce82"),
+                            CategoryId = new Guid("c8f4a413-bd0e-42e4-a775-fddf305e22f5")
                         },
                         new
                         {
-                            ProductId = new Guid("0068505e-4925-4b61-9cdc-4173e8946e9e"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("1bba70b6-65b3-49c5-a420-4bc6006a9c2e"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("0068505e-4925-4b61-9cdc-4173e8946e9e"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("1bba70b6-65b3-49c5-a420-4bc6006a9c2e"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("0068505e-4925-4b61-9cdc-4173e8946e9e"),
-                            CategoryId = new Guid("79ffc79c-1203-45d7-a60d-522116a07589")
+                            ProductId = new Guid("1bba70b6-65b3-49c5-a420-4bc6006a9c2e"),
+                            CategoryId = new Guid("c8f4a413-bd0e-42e4-a775-fddf305e22f5")
                         },
                         new
                         {
-                            ProductId = new Guid("5524939f-695e-4de0-8c11-e0a31dbdd126"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("3c6c8dd5-a9ee-43d3-b3bf-3ec09bc4e829"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("5524939f-695e-4de0-8c11-e0a31dbdd126"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("3c6c8dd5-a9ee-43d3-b3bf-3ec09bc4e829"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("5524939f-695e-4de0-8c11-e0a31dbdd126"),
-                            CategoryId = new Guid("35db38c3-8949-4c43-bf66-2379c5f40d12")
+                            ProductId = new Guid("3c6c8dd5-a9ee-43d3-b3bf-3ec09bc4e829"),
+                            CategoryId = new Guid("f6d7f069-e98c-4ae8-8527-541d7276ca88")
                         },
                         new
                         {
-                            ProductId = new Guid("a4109235-5ca1-41e2-b536-dc38cb73816e"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("c96640a7-9aff-4e6a-875a-a8085554368d"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("a4109235-5ca1-41e2-b536-dc38cb73816e"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("c96640a7-9aff-4e6a-875a-a8085554368d"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("a4109235-5ca1-41e2-b536-dc38cb73816e"),
-                            CategoryId = new Guid("35db38c3-8949-4c43-bf66-2379c5f40d12")
+                            ProductId = new Guid("c96640a7-9aff-4e6a-875a-a8085554368d"),
+                            CategoryId = new Guid("f6d7f069-e98c-4ae8-8527-541d7276ca88")
                         },
                         new
                         {
-                            ProductId = new Guid("ee123577-64d1-45c6-bf8f-6142f059c928"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("6bb12109-c97c-42d5-9302-d5c046cedf09"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("ee123577-64d1-45c6-bf8f-6142f059c928"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("6bb12109-c97c-42d5-9302-d5c046cedf09"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("ee123577-64d1-45c6-bf8f-6142f059c928"),
-                            CategoryId = new Guid("783a12af-a925-456a-82b1-8a6d999998dc")
+                            ProductId = new Guid("6bb12109-c97c-42d5-9302-d5c046cedf09"),
+                            CategoryId = new Guid("77ffaeb9-d322-42e5-b041-bbdfdb8c93c7")
                         },
                         new
                         {
-                            ProductId = new Guid("f6e6bb73-bd82-4c07-99f6-1fbc278e8263"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("ab95dcbf-0428-417f-ac4e-8b9604000d56"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("f6e6bb73-bd82-4c07-99f6-1fbc278e8263"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("ab95dcbf-0428-417f-ac4e-8b9604000d56"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("f6e6bb73-bd82-4c07-99f6-1fbc278e8263"),
-                            CategoryId = new Guid("783a12af-a925-456a-82b1-8a6d999998dc")
+                            ProductId = new Guid("ab95dcbf-0428-417f-ac4e-8b9604000d56"),
+                            CategoryId = new Guid("77ffaeb9-d322-42e5-b041-bbdfdb8c93c7")
                         },
                         new
                         {
-                            ProductId = new Guid("716ba239-89ce-470d-ba4e-a455171d98f0"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("c515ea48-187e-4a80-af4d-6f835c8a531d"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("716ba239-89ce-470d-ba4e-a455171d98f0"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("c515ea48-187e-4a80-af4d-6f835c8a531d"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("716ba239-89ce-470d-ba4e-a455171d98f0"),
-                            CategoryId = new Guid("f4ccb7fe-4090-4e30-8ade-1a3be7c8c266")
+                            ProductId = new Guid("c515ea48-187e-4a80-af4d-6f835c8a531d"),
+                            CategoryId = new Guid("534128af-7a8f-40df-9580-102afdf11196")
                         },
                         new
                         {
-                            ProductId = new Guid("347390ce-54f8-416b-8c91-8872f42f0623"),
-                            CategoryId = new Guid("713af980-25c7-4527-b563-d20941644593")
+                            ProductId = new Guid("c2db1196-6021-4bdb-aa22-dd3909bf3f33"),
+                            CategoryId = new Guid("698b502f-c255-4929-8be8-ce7045db418f")
                         },
                         new
                         {
-                            ProductId = new Guid("347390ce-54f8-416b-8c91-8872f42f0623"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("c2db1196-6021-4bdb-aa22-dd3909bf3f33"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("347390ce-54f8-416b-8c91-8872f42f0623"),
-                            CategoryId = new Guid("f4ccb7fe-4090-4e30-8ade-1a3be7c8c266")
+                            ProductId = new Guid("c2db1196-6021-4bdb-aa22-dd3909bf3f33"),
+                            CategoryId = new Guid("534128af-7a8f-40df-9580-102afdf11196")
                         },
                         new
                         {
-                            ProductId = new Guid("22b43960-2b8d-4d5e-a20c-0817cf26ceae"),
-                            CategoryId = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf")
+                            ProductId = new Guid("80f2dcf0-34fb-4d03-92b1-68829064bc9e"),
+                            CategoryId = new Guid("9d698a70-4209-40a5-8064-93e005d60ede")
                         },
                         new
                         {
-                            ProductId = new Guid("22b43960-2b8d-4d5e-a20c-0817cf26ceae"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("80f2dcf0-34fb-4d03-92b1-68829064bc9e"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("22b43960-2b8d-4d5e-a20c-0817cf26ceae"),
-                            CategoryId = new Guid("651ec71d-6595-4da6-9208-9ee50c3db5d3")
+                            ProductId = new Guid("80f2dcf0-34fb-4d03-92b1-68829064bc9e"),
+                            CategoryId = new Guid("5707502c-c186-4f86-a891-c92ed97db82a")
                         },
                         new
                         {
-                            ProductId = new Guid("d8168f2f-1fd2-4a42-9966-96dd0212108b"),
-                            CategoryId = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf")
+                            ProductId = new Guid("f9eb4ef3-2d07-4f6b-babf-2caacf84b9da"),
+                            CategoryId = new Guid("9d698a70-4209-40a5-8064-93e005d60ede")
                         },
                         new
                         {
-                            ProductId = new Guid("d8168f2f-1fd2-4a42-9966-96dd0212108b"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("f9eb4ef3-2d07-4f6b-babf-2caacf84b9da"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("d8168f2f-1fd2-4a42-9966-96dd0212108b"),
-                            CategoryId = new Guid("79ffc79c-1203-45d7-a60d-522116a07589")
+                            ProductId = new Guid("f9eb4ef3-2d07-4f6b-babf-2caacf84b9da"),
+                            CategoryId = new Guid("c8f4a413-bd0e-42e4-a775-fddf305e22f5")
                         },
                         new
                         {
-                            ProductId = new Guid("e6a11740-db8b-4f1f-bd6c-328af93aae04"),
-                            CategoryId = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf")
+                            ProductId = new Guid("94682e19-fba2-419c-9982-039d61e9c6a8"),
+                            CategoryId = new Guid("9d698a70-4209-40a5-8064-93e005d60ede")
                         },
                         new
                         {
-                            ProductId = new Guid("e6a11740-db8b-4f1f-bd6c-328af93aae04"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("94682e19-fba2-419c-9982-039d61e9c6a8"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("e6a11740-db8b-4f1f-bd6c-328af93aae04"),
-                            CategoryId = new Guid("8d7b666b-d420-49fc-921e-507fb60f0c56")
+                            ProductId = new Guid("94682e19-fba2-419c-9982-039d61e9c6a8"),
+                            CategoryId = new Guid("e204340b-de50-4cdd-b25e-1729e9c9d3d7")
                         },
                         new
                         {
-                            ProductId = new Guid("4bd80771-b963-40de-91c4-6306fe54e26c"),
-                            CategoryId = new Guid("7fc4d300-3c0a-4a94-ac2d-2c1572270799")
+                            ProductId = new Guid("3607b543-ca35-488d-a33b-b8ecf834a55f"),
+                            CategoryId = new Guid("a9a7bdd5-3c4b-4add-87dc-4e3e5b03b0d0")
                         },
                         new
                         {
-                            ProductId = new Guid("4bd80771-b963-40de-91c4-6306fe54e26c"),
-                            CategoryId = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf")
+                            ProductId = new Guid("3607b543-ca35-488d-a33b-b8ecf834a55f"),
+                            CategoryId = new Guid("9d698a70-4209-40a5-8064-93e005d60ede")
                         },
                         new
                         {
-                            ProductId = new Guid("4bd80771-b963-40de-91c4-6306fe54e26c"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("3607b543-ca35-488d-a33b-b8ecf834a55f"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("7adf4645-d242-4cd5-9348-1d0249817e82"),
-                            CategoryId = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf")
+                            ProductId = new Guid("45da42d4-4358-4017-9c0f-5e40cb25af23"),
+                            CategoryId = new Guid("9d698a70-4209-40a5-8064-93e005d60ede")
                         },
                         new
                         {
-                            ProductId = new Guid("7adf4645-d242-4cd5-9348-1d0249817e82"),
-                            CategoryId = new Guid("c2999434-3a40-4773-9874-3480b407b468")
+                            ProductId = new Guid("45da42d4-4358-4017-9c0f-5e40cb25af23"),
+                            CategoryId = new Guid("fb41bb3d-4f49-4c2e-b5f2-b160121cfc90")
                         },
                         new
                         {
-                            ProductId = new Guid("7adf4645-d242-4cd5-9348-1d0249817e82"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("45da42d4-4358-4017-9c0f-5e40cb25af23"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("d559032c-dc8b-4998-bf91-4c70c8bb67b4"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("2f8fd89e-7adb-4620-83a4-c26eb20d7733"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("d559032c-dc8b-4998-bf91-4c70c8bb67b4"),
-                            CategoryId = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf")
+                            ProductId = new Guid("2f8fd89e-7adb-4620-83a4-c26eb20d7733"),
+                            CategoryId = new Guid("9d698a70-4209-40a5-8064-93e005d60ede")
                         },
                         new
                         {
-                            ProductId = new Guid("d559032c-dc8b-4998-bf91-4c70c8bb67b4"),
-                            CategoryId = new Guid("71b337d1-044b-4e1d-a006-c1ac44b390fd")
+                            ProductId = new Guid("2f8fd89e-7adb-4620-83a4-c26eb20d7733"),
+                            CategoryId = new Guid("13ead0ac-aefb-42ec-87e0-f10d497edf58")
                         },
                         new
                         {
-                            ProductId = new Guid("bd6db80f-3fe0-4bcc-82c4-b936a3cfe519"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("727c0392-49ea-4ed9-b052-2e09b8c91303"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("bd6db80f-3fe0-4bcc-82c4-b936a3cfe519"),
-                            CategoryId = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf")
+                            ProductId = new Guid("727c0392-49ea-4ed9-b052-2e09b8c91303"),
+                            CategoryId = new Guid("9d698a70-4209-40a5-8064-93e005d60ede")
                         },
                         new
                         {
-                            ProductId = new Guid("bd6db80f-3fe0-4bcc-82c4-b936a3cfe519"),
-                            CategoryId = new Guid("fb06df6e-5c03-40a0-a393-36046864dd38")
+                            ProductId = new Guid("727c0392-49ea-4ed9-b052-2e09b8c91303"),
+                            CategoryId = new Guid("1cd6a495-e77c-48d2-b613-c20016cb0a55")
                         },
                         new
                         {
-                            ProductId = new Guid("dc5c2184-4b59-4961-a245-bf15f16aa871"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("db62b370-b1bd-47c6-9b5b-07ef3c8698d8"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("dc5c2184-4b59-4961-a245-bf15f16aa871"),
-                            CategoryId = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf")
+                            ProductId = new Guid("db62b370-b1bd-47c6-9b5b-07ef3c8698d8"),
+                            CategoryId = new Guid("9d698a70-4209-40a5-8064-93e005d60ede")
                         },
                         new
                         {
-                            ProductId = new Guid("dc5c2184-4b59-4961-a245-bf15f16aa871"),
-                            CategoryId = new Guid("35db38c3-8949-4c43-bf66-2379c5f40d12")
+                            ProductId = new Guid("db62b370-b1bd-47c6-9b5b-07ef3c8698d8"),
+                            CategoryId = new Guid("f6d7f069-e98c-4ae8-8527-541d7276ca88")
                         },
                         new
                         {
-                            ProductId = new Guid("9dc7ce12-5b6d-41c2-991b-adaeb9757abc"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("0aa0ee11-c7ad-4883-93a8-39a362e6b378"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("9dc7ce12-5b6d-41c2-991b-adaeb9757abc"),
-                            CategoryId = new Guid("a1190251-f42d-4e04-849e-7e8c743ceabf")
+                            ProductId = new Guid("0aa0ee11-c7ad-4883-93a8-39a362e6b378"),
+                            CategoryId = new Guid("9d698a70-4209-40a5-8064-93e005d60ede")
                         },
                         new
                         {
-                            ProductId = new Guid("9dc7ce12-5b6d-41c2-991b-adaeb9757abc"),
-                            CategoryId = new Guid("b064dda5-3ae4-43f4-a265-604ee6b8bda6")
+                            ProductId = new Guid("0aa0ee11-c7ad-4883-93a8-39a362e6b378"),
+                            CategoryId = new Guid("a87a41fb-9903-4900-938c-2d54ff9352da")
                         },
                         new
                         {
-                            ProductId = new Guid("a44475aa-636c-45b1-b018-426d5d5d3a59"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("1ac2a2bf-3642-4e37-8a46-6a0512c6bcff"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("a44475aa-636c-45b1-b018-426d5d5d3a59"),
-                            CategoryId = new Guid("cb2b831f-9fd1-43d8-867b-f03067414658")
+                            ProductId = new Guid("1ac2a2bf-3642-4e37-8a46-6a0512c6bcff"),
+                            CategoryId = new Guid("3a622da7-f854-47e1-a80f-15afc419e925")
                         },
                         new
                         {
-                            ProductId = new Guid("a44475aa-636c-45b1-b018-426d5d5d3a59"),
-                            CategoryId = new Guid("79ffc79c-1203-45d7-a60d-522116a07589")
+                            ProductId = new Guid("1ac2a2bf-3642-4e37-8a46-6a0512c6bcff"),
+                            CategoryId = new Guid("c8f4a413-bd0e-42e4-a775-fddf305e22f5")
                         },
                         new
                         {
-                            ProductId = new Guid("1328f1e4-0b59-4fe0-847a-3a151e5bdcfb"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("d34afa39-7633-4916-8913-02e5ca9342eb"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("1328f1e4-0b59-4fe0-847a-3a151e5bdcfb"),
-                            CategoryId = new Guid("cb2b831f-9fd1-43d8-867b-f03067414658")
+                            ProductId = new Guid("d34afa39-7633-4916-8913-02e5ca9342eb"),
+                            CategoryId = new Guid("3a622da7-f854-47e1-a80f-15afc419e925")
                         },
                         new
                         {
-                            ProductId = new Guid("1328f1e4-0b59-4fe0-847a-3a151e5bdcfb"),
-                            CategoryId = new Guid("c0a87bf6-0057-48c8-a0a3-5a1548e7e827")
+                            ProductId = new Guid("d34afa39-7633-4916-8913-02e5ca9342eb"),
+                            CategoryId = new Guid("05e6208b-0ffa-4ed5-9ad9-082b83670d68")
                         },
                         new
                         {
-                            ProductId = new Guid("faa81faf-2da6-4432-91dc-e7ff40804916"),
-                            CategoryId = new Guid("082c44a8-5d8c-4b7d-b4aa-ef31cc202338")
+                            ProductId = new Guid("09b90a7e-3bb9-40ed-a0e6-28274f39cfb2"),
+                            CategoryId = new Guid("4478bd2e-4c1e-4b36-a9fb-cec34a274a9d")
                         },
                         new
                         {
-                            ProductId = new Guid("faa81faf-2da6-4432-91dc-e7ff40804916"),
-                            CategoryId = new Guid("cb2b831f-9fd1-43d8-867b-f03067414658")
+                            ProductId = new Guid("09b90a7e-3bb9-40ed-a0e6-28274f39cfb2"),
+                            CategoryId = new Guid("3a622da7-f854-47e1-a80f-15afc419e925")
                         },
                         new
                         {
-                            ProductId = new Guid("faa81faf-2da6-4432-91dc-e7ff40804916"),
-                            CategoryId = new Guid("651ec71d-6595-4da6-9208-9ee50c3db5d3")
+                            ProductId = new Guid("09b90a7e-3bb9-40ed-a0e6-28274f39cfb2"),
+                            CategoryId = new Guid("5707502c-c186-4f86-a891-c92ed97db82a")
                         },
                         new
                         {
-                            ProductId = new Guid("855b187b-90e0-440b-af95-f201d7abf426"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("23121f70-0854-4c66-8166-912d14a038b9"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("855b187b-90e0-440b-af95-f201d7abf426"),
-                            CategoryId = new Guid("cb2b831f-9fd1-43d8-867b-f03067414658")
+                            ProductId = new Guid("23121f70-0854-4c66-8166-912d14a038b9"),
+                            CategoryId = new Guid("3a622da7-f854-47e1-a80f-15afc419e925")
                         },
                         new
                         {
-                            ProductId = new Guid("855b187b-90e0-440b-af95-f201d7abf426"),
-                            CategoryId = new Guid("35db38c3-8949-4c43-bf66-2379c5f40d12")
+                            ProductId = new Guid("23121f70-0854-4c66-8166-912d14a038b9"),
+                            CategoryId = new Guid("f6d7f069-e98c-4ae8-8527-541d7276ca88")
                         },
                         new
                         {
-                            ProductId = new Guid("b599059f-1fef-435b-8e4b-b186f58f8530"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("5d8a724f-8c39-452b-bd16-d999c98ab7bb"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("b599059f-1fef-435b-8e4b-b186f58f8530"),
-                            CategoryId = new Guid("cb2b831f-9fd1-43d8-867b-f03067414658")
+                            ProductId = new Guid("5d8a724f-8c39-452b-bd16-d999c98ab7bb"),
+                            CategoryId = new Guid("3a622da7-f854-47e1-a80f-15afc419e925")
                         },
                         new
                         {
-                            ProductId = new Guid("b599059f-1fef-435b-8e4b-b186f58f8530"),
-                            CategoryId = new Guid("c2999434-3a40-4773-9874-3480b407b468")
+                            ProductId = new Guid("5d8a724f-8c39-452b-bd16-d999c98ab7bb"),
+                            CategoryId = new Guid("fb41bb3d-4f49-4c2e-b5f2-b160121cfc90")
                         },
                         new
                         {
-                            ProductId = new Guid("a9a6354a-b307-4e2f-a3ff-08ac4e774dd4"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("afd5ca99-949b-42dd-9232-b749e0bc9d88"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("a9a6354a-b307-4e2f-a3ff-08ac4e774dd4"),
-                            CategoryId = new Guid("cb2b831f-9fd1-43d8-867b-f03067414658")
+                            ProductId = new Guid("afd5ca99-949b-42dd-9232-b749e0bc9d88"),
+                            CategoryId = new Guid("3a622da7-f854-47e1-a80f-15afc419e925")
                         },
                         new
                         {
-                            ProductId = new Guid("a9a6354a-b307-4e2f-a3ff-08ac4e774dd4"),
-                            CategoryId = new Guid("fb06df6e-5c03-40a0-a393-36046864dd38")
+                            ProductId = new Guid("afd5ca99-949b-42dd-9232-b749e0bc9d88"),
+                            CategoryId = new Guid("1cd6a495-e77c-48d2-b613-c20016cb0a55")
                         },
                         new
                         {
-                            ProductId = new Guid("ad6db8dc-79e3-494d-9c3e-3a57418ddbe9"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("a27ab940-43af-4722-866b-fe2cb7b2f5a4"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("ad6db8dc-79e3-494d-9c3e-3a57418ddbe9"),
-                            CategoryId = new Guid("cb2b831f-9fd1-43d8-867b-f03067414658")
+                            ProductId = new Guid("a27ab940-43af-4722-866b-fe2cb7b2f5a4"),
+                            CategoryId = new Guid("3a622da7-f854-47e1-a80f-15afc419e925")
                         },
                         new
                         {
-                            ProductId = new Guid("ad6db8dc-79e3-494d-9c3e-3a57418ddbe9"),
-                            CategoryId = new Guid("71b337d1-044b-4e1d-a006-c1ac44b390fd")
+                            ProductId = new Guid("a27ab940-43af-4722-866b-fe2cb7b2f5a4"),
+                            CategoryId = new Guid("13ead0ac-aefb-42ec-87e0-f10d497edf58")
                         },
                         new
                         {
-                            ProductId = new Guid("5497fb11-da6a-4ba2-b09f-0cff76b57c78"),
-                            CategoryId = new Guid("c468a87b-5cbc-4d7a-bce1-ac38424a6b1b")
+                            ProductId = new Guid("622d2a0b-ca1b-4501-8922-7e4cec000d14"),
+                            CategoryId = new Guid("004e3454-0396-4400-af7b-eebf84c7ced6")
                         },
                         new
                         {
-                            ProductId = new Guid("5497fb11-da6a-4ba2-b09f-0cff76b57c78"),
-                            CategoryId = new Guid("cb2b831f-9fd1-43d8-867b-f03067414658")
+                            ProductId = new Guid("622d2a0b-ca1b-4501-8922-7e4cec000d14"),
+                            CategoryId = new Guid("3a622da7-f854-47e1-a80f-15afc419e925")
                         },
                         new
                         {
-                            ProductId = new Guid("5497fb11-da6a-4ba2-b09f-0cff76b57c78"),
-                            CategoryId = new Guid("783a12af-a925-456a-82b1-8a6d999998dc")
+                            ProductId = new Guid("622d2a0b-ca1b-4501-8922-7e4cec000d14"),
+                            CategoryId = new Guid("77ffaeb9-d322-42e5-b041-bbdfdb8c93c7")
                         });
                 });
 
@@ -1048,23 +1048,23 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8cb0166d-61a5-463e-b51f-3d35bca7df6f"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(633),
-                            ProductId = new Guid("716ba239-89ce-470d-ba4e-a455171d98f0"),
+                            Id = new Guid("5525c3a7-e1a4-4ef6-9ffb-ac93d5526030"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7683),
+                            ProductId = new Guid("c515ea48-187e-4a80-af4d-6f835c8a531d"),
                             RatingValue = 2,
                             Review = "This product was straight garbage cuh",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(633),
-                            UserId = new Guid("3a221282-4db5-491d-a990-0c08df2ee9e7")
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7683),
+                            UserId = new Guid("cba31aa2-9b5e-4792-b9eb-dbca58edbdcc")
                         },
                         new
                         {
-                            Id = new Guid("251b15e5-9976-4f45-be29-b4ddde1e13a4"),
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(637),
-                            ProductId = new Guid("347390ce-54f8-416b-8c91-8872f42f0623"),
+                            Id = new Guid("63ebf039-26b5-444e-bb28-1c1e23bccb75"),
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7686),
+                            ProductId = new Guid("c2db1196-6021-4bdb-aa22-dd3909bf3f33"),
                             RatingValue = 5,
                             Review = "This product was straight fire blud",
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(637),
-                            UserId = new Guid("3a221282-4db5-491d-a990-0c08df2ee9e7")
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7686),
+                            UserId = new Guid("cba31aa2-9b5e-4792-b9eb-dbca58edbdcc")
                         });
                 });
 
@@ -1149,10 +1149,10 @@ namespace bob_api.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3a221282-4db5-491d-a990-0c08df2ee9e7"),
+                            Id = new Guid("cba31aa2-9b5e-4792-b9eb-dbca58edbdcc"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "334cd930-a05d-4cc0-9478-fdc0a55a4bfb",
-                            CreatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(583),
+                            ConcurrencyStamp = "bd86a37f-e940-4468-9803-6268a58bfb45",
+                            CreatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7643),
                             Email = "test@test.no",
                             EmailConfirmed = false,
                             FirstName = "Test",
@@ -1160,9 +1160,9 @@ namespace bob_api.Migrations
                             LockoutEnabled = false,
                             Password = "password",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "e80350ea-5cc9-40b8-ac45-1e863a3ef89f",
+                            SecurityStamp = "3647f050-4c51-46f5-992b-03babf7c6494",
                             TwoFactorEnabled = false,
-                            UpdatedAt = new DateTime(2024, 3, 21, 9, 52, 6, 312, DateTimeKind.Utc).AddTicks(584)
+                            UpdatedAt = new DateTime(2024, 3, 21, 12, 32, 18, 353, DateTimeKind.Utc).AddTicks(7644)
                         });
                 });
 

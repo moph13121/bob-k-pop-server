@@ -151,7 +151,7 @@ namespace bob_api.Data
                 Title = "Ateez Earcuff",
                 Price = 10,
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-az05-ateez-range-piercing-earring-earcuff-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-az05-ateez-range-piercing-earring-earcuff-removebg-preview.png",
                 Stock = 10,
 
             };
@@ -163,7 +163,7 @@ namespace bob_api.Data
                 Price = 15,
                 Title = "BTS Nesto Ring",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-bs110-bts-nesto-ring-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-bs110-bts-nesto-ring-removebg-preview.png",
                 Stock = 10,
             };
 
@@ -174,7 +174,7 @@ namespace bob_api.Data
                 Price = 11,
                 Title = "BTS Mao Earring",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-bs114-bts-mao-earring-ear-cuff-piercing-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-bs114-bts-mao-earring-ear-cuff-piercing-removebg-preview.png",
                 Stock = 10,
             };
 
@@ -184,7 +184,7 @@ namespace bob_api.Data
                 Price = 11,
                 Title = "Exo Transformer Ring",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-ex234-exo-transformer-ring-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-ex234-exo-transformer-ring-removebg-preview.png",
                 Stock = 10,
             };
 
@@ -194,7 +194,7 @@ namespace bob_api.Data
                 Price = 11,
                 Title = "Exo Emblem Necklace",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-ex236-exo-new-emblem-necklace-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-ex236-exo-new-emblem-necklace-removebg-preview.png",
                 Stock = 10,
             };
 
@@ -204,7 +204,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "BlackPink Lisa Necklace",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_girls/Blackpink_Lisa_necklace-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_girls/Blackpink_Lisa_necklace-removebg-preview.png",
                 Stock = 10,
             };
             Product BlackPinkJewelry2 = new Product()
@@ -213,7 +213,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "BlackPink Lisa Bracelet",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_girls/blackpink_Lisa_braclet-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_girls/blackpink_Lisa_braclet-removebg-preview.png",
                 Stock = 10,
             };
 
@@ -223,7 +223,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Girls Generation Smile Earring",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_girls/-sn10-girls-generation-smile-earring-piercing-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_girls/-sn10-girls-generation-smile-earring-piercing-removebg-preview.png",
                 Stock = 10,
             };
 
@@ -233,7 +233,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Girls Generation Ribbon Earring",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_girls/-sn13-girls-generation-cubic-ribbon-earrings-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_girls/-sn13-girls-generation-cubic-ribbon-earrings-removebg-preview.png   ",
                 Stock = 10,
             };
 
@@ -244,7 +244,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Ateez - The World EP 2 OUTLAW",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_boys/ATEEZ%20-%20THE%20WORLD%20EP%202%20%20OUTLAW.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_boys/ATEEZ%20-%20THE%20WORLD%20EP%202%20%20OUTLAW.png",
                 Stock = 10,
             };
             Product BTSJhopeAlbum = new Product()
@@ -253,7 +253,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "JHope - JACK IN THE BOX",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_boys/BTS%20JHOPE%20ALBUM%20-%20JACK%20IN%20THE%20BOX.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_boys/BTS%20JHOPE%20ALBUM%20-%20JACK%20IN%20THE%20BOX.png",
                 Stock = 10,
             };
             Product StrayKidsAlbum = new Product()
@@ -262,7 +262,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Stray Kids - MAXIDENT",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_boys/Stray%20Kids%20-%20MAXIDENT.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_boys/Stray%20Kids%20-%20MAXIDENT.png",
                 Stock = 10,
             };
             Product SeventeenAlbum = new Product()
@@ -271,7 +271,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "SEVENTEEN - FML 10th Mini Album",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_boys/SEVENTEEN%20-%20FML%2010th%20Mini%20Album.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_boys/SEVENTEEN%20-%20FML%2010th%20Mini%20Album.png",
                 Stock = 10,
             };
             Product GIDLEAlbum = new Product()
@@ -280,7 +280,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "(G)I-DLE - I FEEL 6th Mini Album",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/(G)I-DLE%20-%20I%20FEEL%206th%20Mini%20Album.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_girls/(G)I-DLE%20-%20I%20FEEL%206th%20Mini%20Album.png",
                 Stock = 10,
             };
             Product RedVelvetAlbum = new Product()
@@ -299,7 +299,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "LE SSERAFIM - ANTIFRAGILE",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/LE%20SSERAFIM%20ALBUM-%20ANTIFRAGILE.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_girls/RED_VELVET%20ALBUM.png",
                 Stock = 10,
             };
             Product BlackPinkLisaAlbum = new Product()
@@ -308,7 +308,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "BlackPink Lisa - LALISA",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/BLACKPINK%20LISA%20ALBUM%20-%20LALISA.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_girls/BLACKPINK%20LISA%20ALBUM%20-%20LALISA.png",
                 Stock = 10,
             };
 
@@ -318,7 +318,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Twice - With You",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/TWICE%20ALBUM%20-%20WITH%20YOU-TH.jpg",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_girls/TWICE%20ALBUM%20-%20WITH%20YOU-TH.jpg",
                 Stock = 10,
             };
 
@@ -329,7 +329,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "BTS Official Light Stick Special Edition",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_boys/BTS%20Official%20Light%20Stick%20Special%20Edition.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_boys/BTS%20Official%20Light%20Stick%20Special%20Edition.png",
                 Stock = 10,
             };
 
@@ -339,7 +339,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "BigBang Official Light Stick ",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_boys/BIGBANG%20OFFICIAL%20LIGHT%20STICK%20VER%204.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_boys/BIGBANG%20OFFICIAL%20LIGHT%20STICK%20VER%204.png",
                 Stock = 10,
             };
 
@@ -349,7 +349,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Ateez Official Light Ver.2",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_boys/ATEEZ%20OFFICIAL%20LIGHTSTICK%20VER%202%20.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_boys/ATEEZ%20OFFICIAL%20LIGHTSTICK%20VER%202%20.png",
                 Stock = 10,
             };
 
@@ -359,7 +359,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Blackpink Official Lightstick Ver.2",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_girls/BLACKPINK%20OFFICIAL%20LIGHTSTICK%20VER%202%20%E2%80%93%20NEW%20MODEL.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_girls/BLACKPINK%20OFFICIAL%20LIGHTSTICK%20VER%202%20%E2%80%93%20NEW%20MODEL.png",
                 Stock = 10,
             };
 
@@ -379,7 +379,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "LE SSERAFIM Official Lightstick",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_girls/LE%20SSERAFIM%20OFFICIAL%20LIGHTSTICK.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_girls/GIDLE%20OFFICIAL%20LIGHTSTICK%20VER..png",
                 Stock = 10,
             };
 
@@ -389,7 +389,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Red Velvet Official Lightstick",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_girls/RED%20VELVET%20OFFICIAL%20LIGHTSTICK.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_girls/RED%20VELVET%20OFFICIAL%20LIGHTSTICK.png",
                 Stock = 10,
             };
 
@@ -399,7 +399,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Girls Generation Official Lightstick",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Lightsticks_girls/GIRLS_GENERATION_OFFICIAL_LIGHTSTICK.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Lightsticks_girls/GIRLS_GENERATION_OFFICIAL_LIGHTSTICK.png",
                 Stock = 10,
             };
             _products.Add(AteezEaring1);

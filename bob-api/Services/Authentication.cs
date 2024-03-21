@@ -18,6 +18,8 @@ namespace bob_api.Services
     {
         public string? Email { get; set; }
         public string? Token { get; set; }
+
+        public Guid? Id { get; set; }
     }
 
     public class Registration

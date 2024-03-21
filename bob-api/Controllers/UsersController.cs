@@ -91,6 +91,7 @@ namespace bob_api.Controllers
             {
                 Email = userInDb.Email,
                 Token = accessToken,
+                Id = userInDb.Id,
             });
         }
     }
