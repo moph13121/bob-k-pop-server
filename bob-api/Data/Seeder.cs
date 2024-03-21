@@ -140,7 +140,7 @@ namespace bob_api.Data
                 Title = "Ateez Leak Earring",
                 Price = 10,
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/Jewelry_boys/-az04-ateez-leak-earring-removebg-preview.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/Jewelry_boys/-az04-ateez-leak-earring-removebg-preview.png",
                 Stock = 10,
 
             };
@@ -289,7 +289,7 @@ namespace bob_api.Data
                 Price = 10,
                 Title = "Red Velvet - Album",
                 Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                Image = "https://github.com/moph13121/bob-k-pop-server/blob/main/images/KpopMusic_girls/RED_VELVET%20ALBUM.png",
+                Image = "https://raw.githubusercontent.com/moph13121/bob-k-pop-server/main/images/KpopMusic_girls/RED_VELVET%20ALBUM.png",
                 Stock = 10,
             };
 
